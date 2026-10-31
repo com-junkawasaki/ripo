@@ -14,6 +14,20 @@ test_split_and_merge (test_engine.EngineTests.test_split_and_merge) ... ok
 test_two_blocks (test_engine.EngineTests.test_two_blocks) ... ok
 test_weight_scale_invariance (test_engine.EngineTests.test_weight_scale_invariance) ... ok
 test_zero_time (test_engine.EngineTests.test_zero_time) ... ok
+test_decimal_reservations_do_not_accumulate_binary_roundoff (test_market.MarketTests.test_decimal_reservations_do_not_accumulate_binary_roundoff) ... ok
+test_denial_does_not_become_approval_or_a_request (test_market.MarketTests.test_denial_does_not_become_approval_or_a_request) ... ok
+test_freshness_boundary_and_unknown_qualification (test_market.MarketTests.test_freshness_boundary_and_unknown_qualification) ... ok
+test_negative_value_and_unsupported_runtime_are_refused (test_market.MarketTests.test_negative_value_and_unsupported_runtime_are_refused) ... ok
+test_no_demand_is_explicit_and_missing_demand_is_error (test_market.MarketTests.test_no_demand_is_explicit_and_missing_demand_is_error) ... ok
+test_optimizer_dominates_greedy_under_same_constraints (test_market.MarketTests.test_optimizer_dominates_greedy_under_same_constraints) ... ok
+test_order_changes_do_not_change_optimal_value (test_market.MarketTests.test_order_changes_do_not_change_optimal_value) ... ok
+test_positive_demand_never_fits_zero_capacity (test_market.MarketTests.test_positive_demand_never_fits_zero_capacity) ... ok
+test_published_percentage_points_and_relative_change_are_distinct (test_market.MarketTests.test_published_percentage_points_and_relative_change_are_distinct) ... ok
+test_reserves_and_memory_bind_even_with_cpu_idle (test_market.MarketTests.test_reserves_and_memory_bind_even_with_cpu_idle) ... ok
+test_ripo_boundary_is_not_an_authority_or_capacity_boundary (test_market.MarketTests.test_ripo_boundary_is_not_an_authority_or_capacity_boundary) ... ok
+test_snapshot_does_not_certify_offer_or_improvement (test_market.MarketTests.test_snapshot_does_not_certify_offer_or_improvement) ... ok
+test_solver_against_independent_small_enumeration (test_market.MarketTests.test_solver_against_independent_small_enumeration) ... ok
+test_units_direction_and_nonfinite_refusals (test_market.MarketTests.test_units_direction_and_nonfinite_refusals) ... ok
 test_copy_has_no_automatic_lineage (test_profile.SnapshotProfileTests.test_copy_has_no_automatic_lineage) ... ok
 test_every_advertised_fixture_is_extractable (test_profile.SnapshotProfileTests.test_every_advertised_fixture_is_extractable) ... ok
 test_invalid_observation_and_weights (test_profile.SnapshotProfileTests.test_invalid_observation_and_weights) ... ok
@@ -26,6 +40,6 @@ test_stable_fixture_and_deterministic_identity (test_profile.SnapshotProfileTest
 test_tau_refusals (test_profile.SnapshotProfileTests.test_tau_refusals) ... ok
 
 ----------------------------------------------------------------------
-Ran 26 tests in 1.439s
+Ran 40 tests in 1.288s
 
 OK

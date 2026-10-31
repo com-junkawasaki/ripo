@@ -27,9 +27,29 @@ python scripts/validate_rdf.py
 node test_viewer.cjs
 ```
 
-The 16 recovered numeric tests and ten snapshot-interface tests exercise the model, probability conservation, permutation/weight-scale invariance, copy versus handoff, split/merge, missing observations and refusal of unsupported inputs. The DOM shim checks 720 scenario/time/scale/layout/width states and is not pixel/layout QA. All runtime computation, exports and the viewer operate without network access after dependency installation. Python is a scientific reference, not a Kotoba native qualification gate. No JVM/nbb path or CI workflow is included.
+The 16 recovered numeric tests and ten snapshot-interface tests exercise the model, probability conservation, permutation/weight-scale invariance, copy versus handoff, split/merge, missing observations and refusal of unsupported inputs. Fourteen additional market-study controls cover allocation, reserves, eligibility, decimal capacity boundaries and evidence boundaries (40 total). The DOM shim checks 720 scenario/time/scale/layout/width states and is not pixel/layout QA. All runtime computation, exports and the viewer operate without network access after dependency installation. Python is a scientific reference, not a Kotoba native qualification gate. No JVM/nbb path or CI workflow is included.
 
 ## Supply snapshots
+
+### Awai resource-matching study (JUN-727)
+
+[Japanese research report](docs/AWAI-MARKET-20261031.md) compares published Uber
+observations, Airbnb's reported online experiment and static counterfactuals,
+an anonymized short Awai snapshot, and a separately typed synthetic allocation
+model. The study invokes the existing RIPO extractor on an explicit undirected
+exchange fixture; job/provider eligibility remains directed and separate.
+
+```sh
+OPENBLAS_NUM_THREADS=1 python market.py
+```
+
+Inputs live in `data/market-evidence.json`, `data/awai-snapshot-20261031.json` and
+`examples/awai-market.json`; output is `results/awai-market/`. Synthetic value
+points and reservation ratios are not actual revenue, GPU utilization, job
+completion or Awai improvement. No real jobs are dispatched and no host
+permissions are granted. The new controls are included in unittest discovery.
+
+### Original snapshot CLI
 
 ```sh
 python ripo.py fixture --scenario replacement --output examples/replacement.json

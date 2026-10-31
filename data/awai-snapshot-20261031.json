@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-31",
+  "measurement": "short read-only snapshots, not representative baseline or allocatable capacity",
+  "nodes": [
+    {
+      "nodeAlias": "N1",
+      "chip": "Apple M1 Max",
+      "ramGiB": 32.0,
+      "logicalCPU": 10,
+      "cpuBusyPctLastShortSample": 86.06,
+      "internalPoolFreeGiB": 39.8,
+      "dataVolumeCapacityPct": 96,
+      "gpuUtilization": "unmeasured"
+    },
+    {
+      "nodeAlias": "N2",
+      "chip": "Apple M4",
+      "ramGiB": 16.0,
+      "logicalCPU": 10,
+      "cpuBusyPctLastShortSample": 61.31,
+      "internalPoolFreeGiB": 21.4,
+      "dataVolumeCapacityPct": 90,
+      "gpuUtilization": "unmeasured"
+    },
+    {
+      "nodeAlias": "N3",
+      "chip": "Apple M4",
+      "ramGiB": 16.0,
+      "logicalCPU": 10,
+      "cpuBusyPctLastShortSample": 5.62,
+      "internalPoolFreeGiB": 18.6,
+      "dataVolumeCapacityPct": 91,
+      "gpuUtilization": "unmeasured"
+    },
+    {
+      "nodeAlias": "N4",
+      "chip": "Apple M4",
+      "ramGiB": 16.0,
+      "logicalCPU": 10,
+      "cpuBusyPctLastShortSample": 5.06,
+      "internalPoolFreeGiB": 92.1,
+      "dataVolumeCapacityPct": 55,
+      "gpuUtilization": "unmeasured"
+    },
+    {
+      "nodeAlias": "N5",
+      "chip": "Apple M4",
+      "ramGiB": 32.0,
+      "logicalCPU": 10,
+      "cpuBusyPctLastShortSample": 27.3,
+      "internalPoolFreeGiB": 117.3,
+      "dataVolumeCapacityPct": 73,
+      "gpuUtilization": "unmeasured"
+    }
+  ],
+  "provenance": {
+    "collector": "read-only OS telemetry, summarized by Codex",
+    "tracking": "AWAI-124",
+    "time_semantics": "Separate short samples collected around 21:57 JST and later on 2026-10-31, not simultaneous",
+    "raw_identifiers": "retained privately; anonymous labels are unrelated to synthetic fixture labels",
+    "consent_and_offered_schedule": "not measured",
+    "original_sanitized_sha256": "45687d8cdd9ce164dc8bd11dfab3cdf09a3abb384a4d13dda2bc360db6f0c53e"
+  }
+}

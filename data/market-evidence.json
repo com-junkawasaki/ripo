@@ -1,0 +1,120 @@
+{
+  "retrieved_date_jst": "2026-10-31",
+  "sources": [
+    {
+      "id": "uber2016",
+      "url": "https://www.nber.org/system/files/working_papers/w22083/w22083.pdf",
+      "sha256": "4b2f64bc5077de300dc62f4f8bec61dab2291649afaaf49d0a54be3a17181e4b",
+      "bytes": 408450,
+      "retrieved_date_jst": "2026-10-31"
+    },
+    {
+      "id": "airbnb-search",
+      "url": "https://andreyfradkin.com/assets/SearchMatchingEfficiency.pdf",
+      "sha256": "62ed136cfca6ada1f0c58ab97a8a27138767c1a775963816fbafef03cdf87a2a",
+      "bytes": 3333015,
+      "retrieved_date_jst": "2026-10-31"
+    },
+    {
+      "id": "airbnb-welfare2022",
+      "url": "https://andreyfradkin.com/assets/airbnb_welfare_paper.pdf",
+      "sha256": "6c5b9eaa924a841553b877ecc342134443cce9ab647e8335f193c49e9132958f",
+      "bytes": 866970,
+      "retrieved_date_jst": "2026-10-31"
+    },
+    {
+      "id": "airbnb-maps2024",
+      "url": "https://arxiv.org/html/2407.00091v1",
+      "sha256": "0effb0356f10b964c4d616c85f88acbe006b24bfe4ec52f7b888f83e51bc5377",
+      "bytes": 240629,
+      "retrieved_date_jst": "2026-10-31"
+    }
+  ],
+  "uber_table1_aggregate_F": [
+    {
+      "city": "Boston",
+      "taxi_pct": 32.0,
+      "uber_pct": 46.1,
+      "taxi_period": "3 days in 2013",
+      "uber_period": "corresponding 3 days in 2015"
+    },
+    {
+      "city": "San Francisco",
+      "taxi_pct": 38.5,
+      "uber_pct": 54.3,
+      "taxi_period": "July-October 2013",
+      "uber_period": "July-October 2015"
+    },
+    {
+      "city": "New York",
+      "taxi_pct": 49.5,
+      "uber_pct": 51.2,
+      "taxi_period": "2013",
+      "uber_period": "12 months ending December 1 2015"
+    }
+  ],
+  "uber_scope": {
+    "source_id": "uber2016",
+    "locator": "Table 1, printed p12, F columns",
+    "denominator": "aggregate passenger hours / aggregate driver work hours, NOT driver-average f or 24-hour car time",
+    "identification": "descriptive comparisons across drivers and periods, not randomized causal attribution",
+    "missing": "Los Angeles and Seattle taxi F are NA, excluded rather than zero",
+    "disclosure": "Uber supplied data; Krueger disclosed past Uber-commissioned work, no ongoing relationship reported"
+  },
+  "airbnb_search_table6": {
+    "random_order": {
+      "accepted": 0.077,
+      "reject_given_contact": 0.775
+    },
+    "random_available": {
+      "accepted": 0.182,
+      "reject_given_contact": 0.426
+    },
+    "status_quo": {
+      "accepted": 0.243,
+      "reject_given_contact": 0.318
+    },
+    "personalized_available": {
+      "accepted": 0.306,
+      "reject_given_contact": 0.441
+    },
+    "rejection_weighted": {
+      "accepted": 0.336,
+      "reject_given_contact": 0.362
+    }
+  },
+  "airbnb_search_scope": {
+    "source_id": "airbnb-search",
+    "locator": "Table 6, printed p51; rows 1,2,3,7,8",
+    "sample": "Chicago search data September 2013 to September 2014; stays fewer than 8 nights",
+    "identification": "static choice-model counterfactuals, NOT measured before-after policy rollout or randomized treatment",
+    "denominator": "Accepted: all searchers; reject_given_contact: searchers who contact. Do not combine the overall 42% rejection statistic with the model table baseline.",
+    "limits": "fixed search exposure, no dynamic market-clearing/price equilibrium response; original microdata unavailable here; author worked at Airbnb"
+  },
+  "airbnb_welfare2022": {
+    "source_id": "airbnb-welfare2022",
+    "locator": "AER 2022 pp1783-1785, model estimate for top ten cities in 2014",
+    "consumer_surplus_million_USD": 305,
+    "peer_host_surplus_million_USD": 112,
+    "consumer_surplus_per_Airbnb_room_night_USD_approx": 70,
+    "peer_surplus_per_Airbnb_room_night_USD_approx": 26,
+    "identification": "estimated short-run structural equilibrium counterfactual, not revenue or comprehensive social welfare",
+    "limits": "consumer benefit includes hotel travelers; excludes full long-run housing/labor/neighborhood externalities; older working-paper figures must not be mixed"
+  },
+  "airbnb_reported_online_experiment": {
+    "source_id": "airbnb-maps2024",
+    "locator": "Haldar et al. 2024, section 3.1 final experiment, following Table 2",
+    "mechanism": "Bookability Filter: reduce low-booking-probability map pins, alpha=1; baseline up to 18 pins without filtering",
+    "identification": "authors report online randomized A/B experiment; not independently re-estimated here",
+    "control_searchers_reported": 34000000,
+    "treatment_searchers_reported": 34000000,
+    "uncancelled_bookings_relative_lift_pct": 1.9,
+    "five_star_trips_relative_lift_pct": 2.0,
+    "impressions_to_discovery_relative_change_pct": -16,
+    "clicks_to_discovery_relative_change_pct": -6.8,
+    "p_value_key_metrics_reported_upper_bound": 1e-05,
+    "raw_bookings_counts": null,
+    "standard_error": null,
+    "limits": "company-authored study; no user-level outcomes or booking counts supplied here; global booking-normalized lift, not 1.9 percentage points of occupancy or utilization. Other launched changes cannot be added arithmetically to this lift."
+  }
+}

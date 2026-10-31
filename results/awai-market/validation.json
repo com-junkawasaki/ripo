@@ -1,0 +1,57 @@
+{
+  "date_jst": "2026-10-31",
+  "tracking_issue": "JUN-727",
+  "python": "3.12.11",
+  "platform": "Darwin arm64",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "checks": {
+    "unittest_discover": {
+      "passed": true,
+      "tests": 40
+    },
+    "market_reproduction": {
+      "passed": true,
+      "policies": 5,
+      "reserve_order_cases": 100,
+      "policies_per_sensitivity_case": 2
+    },
+    "existing_reproduction_script": {
+      "passed": true,
+      "commands": [
+        "python engine.py",
+        "python build.py",
+        "python scripts/validate_rdf.py",
+        "node test_viewer.cjs",
+        "python ripo.py fixture/extract"
+      ],
+      "numeric_outputs": "unchanged after removing seconds/experiment_seconds; timing-only outputs restored",
+      "jsonld_records": 710,
+      "rdf_triples": 3380,
+      "rdf_negative_controls": 3,
+      "viewer_dom_states": 720
+    },
+    "new_plot_visual_inspection": {
+      "passed": true,
+      "scope": "comparison.png only; not browser application visual QA"
+    }
+  },
+  "files_sha256": {
+    "market.py": "6ba406421f37bf50349a64f8df2f0497b14c9e749828e52bceac5d450a9b0f00",
+    "test_market.py": "445a0851da03dfbb2f5c3eaba167949bae847a60b3ea0f61b9d554e899334a02",
+    "examples/awai-market.json": "a2c8a9173248fa3a01b66611e121c81ec2a4a63de50e87d7c1ca2703d7381717",
+    "data/market-evidence.json": "819eaffb9ee4fe8e04102fa3751f87cd6d4a6f145309ce7498c19711182fc300",
+    "data/awai-snapshot-20261031.json": "3965f0a301646caf5102dc5a73bd50f5233864b3956d619a5ef13f81dcbd25f9",
+    "results/awai-market/result.json": "eec25e65e5dec195017b47bb84068151a5fe5ad44432814d84b93683420410b1",
+    "results/awai-market/comparison.png": "0306268630ccaa8423d2b90014104f1065a6e0f9adddf926347d299e4b2468d7"
+  },
+  "not_verified": [
+    "real workload improvement",
+    "representative 7-day baseline",
+    "GPU/energy/network performance",
+    "native runtime or scheduler deployment",
+    "merge or publication"
+  ],
+  "review_fix": "zero-capacity positive-demand refusal; decimal reservation sums; two added regressions"
+}
