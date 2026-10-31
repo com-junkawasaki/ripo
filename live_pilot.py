@@ -95,6 +95,22 @@ def emit(value):
     print(json.dumps(value, ensure_ascii=False, allow_nan=False), flush=True)
 
 
+def remote_program(config):
+    source = Path(__file__).read_text()
+    source = source.rsplit("\nif __name__ == '__main__':", 1)[0]
+    source += '\nremote_run(' + repr(config) + ')\n'
+    compile(source, 'remote-measurement-helper', 'exec')
+    return source
+
+
+def evidence_status(events):
+    if not events:
+        raise ValueError('empty measurement evidence')
+    if events[-1].get('event') not in ('complete', 'stop'):
+        raise ValueError('missing terminal measurement record')
+    return events[-1]['event']
+
+
 def remote_run(config):
     port = config['port']
     emit({'event': 'protocol', 'protocol': config, 'qualification': 'observed_headroom_proxies_only'})
@@ -195,14 +211,13 @@ def main():
     if not re.fullmatch(r'100\.\d+\.\d+\.\d+', args.tailscale_address):
         p.error('explicit Tailscale IPv4 address required')
     cfg = json.loads(args.protocol.read_text())
-    code = Path(__file__).read_text()
-    code = code[:code.index("if __name__ == '__main__':")]
-    code += '\nremote_run(' + repr(cfg) + ')\n'
+    code = remote_program(cfg)
     cmd = ['ssh', '-oBatchMode=yes', '-oStrictHostKeyChecking=yes', '-oConnectTimeout=5',
            '-oServerAliveInterval=5', '-oServerAliveCountMax=2',
            '-oHostname=' + args.tailscale_address, args.ssh_host, 'python3', '-']
     args.output.parent.mkdir(parents=True, exist_ok=True)
     os.umask(0o077)
+    events = []
     with args.output.open('x') as log:
         process = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE, text=True)
@@ -211,6 +226,7 @@ def main():
             log.write(line); log.flush()
             try:
                 d = json.loads(line)
+                events.append(d)
                 if d.get('event') in ['trial_result', 'trial_error', 'stop', 'complete']:
                     print(json.dumps({k: v for k, v in d.items() if k != 'output'}), flush=True)
             except ValueError:
@@ -219,6 +235,10 @@ def main():
         status = process.wait()
         if status:
             raise SystemExit(f'SSH failed ({status}): {error[:200]}')
+        try:
+            print('Measurement terminal state: ' + evidence_status(events), flush=True)
+        except ValueError as e:
+            raise SystemExit(str(e))
 
 
 if __name__ == '__main__':

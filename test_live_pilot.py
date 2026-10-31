@@ -1,8 +1,20 @@
 import unittest
-from live_pilot import guard_reasons, validate_output
+from live_pilot import evidence_status, guard_reasons, remote_program, validate_output
 
 
 class PilotControls(unittest.TestCase):
+    def test_remote_helper_compiles_and_invokes_collection(self):
+        program = remote_program({'port': 18094})
+        compile(program, 'test-helper', 'exec')
+        self.assertTrue(program.endswith("remote_run({'port': 18094})\n"))
+
+    def test_empty_or_partial_evidence_cannot_pass(self):
+        with self.assertRaisesRegex(ValueError, 'empty'):
+            evidence_status([])
+        with self.assertRaisesRegex(ValueError, 'terminal'):
+            evidence_status([{'event': 'baseline_sample'}])
+        self.assertEqual(evidence_status([{'event': 'stop'}]), 'stop')
+
     def good(self):
         return {'cpu_idle_pct': 50, 'memory_pressure_free_pct': 40,
                 'wired_compressor_pct': 60, 'swap_used_MiB': 0,
