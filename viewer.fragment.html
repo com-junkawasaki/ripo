@@ -1,0 +1,104 @@
+<div id="ripo-computed-lab">
+  <h3>関係から抽出した輪郭と、証拠に基づく継承</h3>
+  <div class="viz-controls">
+    <label class="form-label">人工データ <select class="form-select" id="ripo-case"></select></label>
+    <label class="form-label">解像度 τ <select class="form-select" id="ripo-scale"></select></label>
+    <label class="form-label">表示配置 <select class="form-select" id="ripo-layout"><option value="grid">対の配置</option><option value="circle">円配置</option></select></label>
+  </div>
+  <label class="form-label" for="ripo-time">観測時点 <output id="ripo-time-value">t = 3</output></label>
+  <input class="form-range" id="ripo-time" type="range" min="0" max="5" step="1" value="3">
+  <div id="ripo-readout" aria-live="polite"></div>
+  <div id="ripo-network"></div>
+  <div class="text-small text-muted">点：観測単位　線：入力関係　面：計算したブロックのガウシアン等値線</div>
+  <div id="ripo-lineage"></div>
+  <div class="text-small text-muted">実線：成員の重複　破線：入力した引継ぎ証拠　色：各時点のブロック（個体IDではありません）</div>
+  <div class="text-small" id="ripo-evidence" aria-live="polite"></div>
+  <div class="text-small text-muted">人工データ・各時点8点・4,140分割を全探索。輪郭は物理境界や存在確率ではありません。</div>
+</div>
+<style>
+#ripo-computed-lab #ripo-network,#ripo-computed-lab #ripo-lineage{width:100%}
+#ripo-computed-lab svg{display:block;width:100%;overflow:visible}
+#ripo-computed-lab svg text{font-size:12px;fill:var(--foreground)}
+#ripo-computed-lab #ripo-evidence{margin:12px 0}
+#ripo-computed-lab #ripo-readout{margin-top:8px}
+</style>
+<script>
+(() => {
+ const data=__EXPERIMENT_JSON__;
+ const root=document.getElementById('ripo-computed-lab');
+ const q=id=>root.querySelector('#'+id);
+ const cases=q('ripo-case'),scales=q('ripo-scale'),layout=q('ripo-layout'),time=q('ripo-time');
+ data.scenarios.forEach((s,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=s.title;cases.append(opt)});
+ data.scales.forEach(s=>{const opt=document.createElement('option');opt.value=s;opt.textContent=s;scales.append(opt)});
+ cases.value='1';scales.value='1';
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const color=(c,n)=>n>6?'var(--viz-series-1)':`var(--viz-series-${c%6+1})`;
+ function state(){
+  const s=data.scenarios[Number(cases.value)],t=Number(time.value),key=String(Number(scales.value).toFixed(1));
+  return {s,t,key,f:s.frames[t],r:s.frames[t].results[key]};
+ }
+ function draw(){
+  const {s,t,key,f,r}=state();
+  q('ripo-time-value').textContent=`t = ${t}`;
+  const count=new Set(r.labels).size;
+  q('ripo-readout').textContent=`抽出ブロック ${count}　目的関数 r = ${r.score.toFixed(4)}　同率最適解 ${r.ties}`;
+  const el=q('ripo-network'),w=Math.max(280,el.clientWidth),h=290;
+  const X=x=>24+(w-48)*(x+.18)/1.36,Y=y=>12+(h-24)*(y+.18)/1.36;
+  const points=data.rendering.positions[layout.value];
+  let marks='';
+  const paths=data.rendering.contours[r.labels.join(',')][layout.value];
+  paths.forEach(c=>c.segments.forEach(seg=>{
+   const d=seg.map((p,i)=>(i?'L':'M')+X(p[0]).toFixed(2)+','+Y(p[1]).toFixed(2)).join(' ')+' Z';
+   marks+=`<path d="${d}" fill="${color(c.group,count)}" fill-opacity="0.12" stroke="${color(c.group,count)}" stroke-width="1"/>`;
+  }));
+  const max=Math.max(...f.adjacency.flat());
+  for(let i=0;i<8;i++)for(let j=i+1;j<8;j++){
+   const weight=f.adjacency[i][j];if(!weight)continue;
+   const ratio=weight/max;
+   marks+=`<line x1="${X(points[i][0])}" y1="${Y(points[i][1])}" x2="${X(points[j][0])}" y2="${Y(points[j][1])}" stroke="var(--foreground)" stroke-width="${.5+ratio}" opacity="${.05+.24*ratio}"/>`;
+  }
+  points.forEach((p,i)=>{
+   marks+=`<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="4" fill="${color(r.labels[i],count)}"/>`;
+   marks+=`<text x="${X(p[0])}" y="${Y(p[1])-10}" text-anchor="middle">${esc(f.ids[i])}</text>`;
+  });
+  el.innerHTML=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(s.title)} t=${t} 解像度${key}の計算済み関係・ブロック・輪郭">${marks}</svg>`;
+  drawLineage(s,t,key);
+  const lin=t?s.lineages[key][t-1]:null;
+  let note=s.note;
+  if(lin){
+   const kinds={};lin.links.forEach(e=>{kinds[e.kind]=(kinds[e.kind]||0)+1});
+   const translated={handoff:'引継ぎ',member_continuity:'成員重複',split:'分岐',merge:'合流',split_merge:'分岐・合流'};
+   note+=' '+Object.entries(kinds).map(([k,v])=>`${translated[k]} ${v}件`).join(' / ');
+   if(lin.unlinked_after.length)note+=` / 来歴未確定 ${lin.unlinked_after.length}ブロック`;
+  }
+  if(s.key==='common_driver')note+=` 機構グラフ：${f.mechanism_result.status}。`;
+  q('ripo-evidence').textContent=note;
+ }
+ function drawLineage(s,selected,key){
+  const el=q('ripo-lineage'),w=Math.max(280,el.clientWidth),h=185;
+  const X=t=>30+t*(w-60)/5,Y=v=>34+v*16;
+  const center=(f,c)=>{const ix=f.results[key].labels.map((l,i)=>l===c?i:null).filter(i=>i!==null);return ix.reduce((a,b)=>a+b,0)/ix.length};
+  let marks=`<text x="8" y="16">継承・対応の履歴</text>`;
+  s.lineages[key].forEach((lin,t)=>lin.links.forEach(e=>{
+   const y1=Y(center(s.frames[t],e.source)),y2=Y(center(s.frames[t+1],e.target));
+   const x1=X(t)+8,x2=X(t+1)-8,mid=(x1+x2)/2;
+   marks+=`<path d="M${x1},${y1} C${mid},${y1} ${mid},${y2} ${x2},${y2}" fill="none" stroke="var(--foreground)" opacity=".35" stroke-width="1" ${e.kind==='handoff'?'stroke-dasharray="4 3"':''}/>`;
+  }));
+  s.frames.forEach((f,t)=>{
+   const labs=f.results[key].labels,n=new Set(labs).size;
+   if(t===selected)marks+=`<rect x="${X(t)-13}" y="25" width="26" height="130" fill="var(--foreground)" fill-opacity=".05"/>`;
+   [...new Set(labs)].forEach(c=>{
+    const ix=labs.map((l,i)=>l===c?i:null).filter(i=>i!==null);
+    marks+=`<rect x="${X(t)-7}" y="${Y(Math.min(...ix))-6}" width="14" height="${(Math.max(...ix)-Math.min(...ix))*16+12}" rx="4" fill="${color(c,n)}" fill-opacity=".25"/>`;
+   });
+   labs.forEach((c,i)=>{marks+=`<circle cx="${X(t)}" cy="${Y(i)}" r="2.5" fill="${color(c,n)}"/>`});
+   marks+=`<text x="${X(t)}" y="174" text-anchor="middle">t${t}</text>`;
+  });
+  el.innerHTML=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="観測時点0から5のブロック対応。破線は明示的引継ぎ、線の欠落は来歴未確定。">${marks}</svg>`;
+ }
+ [cases,scales,layout,time].forEach(el=>el.addEventListener('input',draw));
+ new ResizeObserver(draw).observe(q('ripo-network'));
+ draw();
+})();
+</script>
+

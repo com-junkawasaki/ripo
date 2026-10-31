@@ -1,0 +1,31 @@
+test_computed_split_merge (test_engine.EngineTests.test_computed_split_merge) ... ok
+test_copy_is_not_identity (test_engine.EngineTests.test_copy_is_not_identity) ... ok
+test_global_optimum_independent_loop (test_engine.EngineTests.test_global_optimum_independent_loop) ... ok
+test_homogeneous_graph_is_not_automatically_one (test_engine.EngineTests.test_homogeneous_graph_is_not_automatically_one) ... ok
+test_interventions_match_analytic_equilibria (test_engine.EngineTests.test_interventions_match_analytic_equilibria) ... ok
+test_invalid_inputs (test_engine.EngineTests.test_invalid_inputs) ... ok
+test_isolated_observation (test_engine.EngineTests.test_isolated_observation) ... ok
+test_no_evidence_abstention (test_engine.EngineTests.test_no_evidence_abstention) ... ok
+test_partition_enumeration (test_engine.EngineTests.test_partition_enumeration) ... ok
+test_permutation_equivariance (test_engine.EngineTests.test_permutation_equivariance) ... ok
+test_probability_kernel (test_engine.EngineTests.test_probability_kernel) ... ok
+test_replacement_needs_evidence (test_engine.EngineTests.test_replacement_needs_evidence) ... ok
+test_split_and_merge (test_engine.EngineTests.test_split_and_merge) ... ok
+test_two_blocks (test_engine.EngineTests.test_two_blocks) ... ok
+test_weight_scale_invariance (test_engine.EngineTests.test_weight_scale_invariance) ... ok
+test_zero_time (test_engine.EngineTests.test_zero_time) ... ok
+test_copy_has_no_automatic_lineage (test_profile.SnapshotProfileTests.test_copy_has_no_automatic_lineage) ... ok
+test_every_advertised_fixture_is_extractable (test_profile.SnapshotProfileTests.test_every_advertised_fixture_is_extractable) ... ok
+test_invalid_observation_and_weights (test_profile.SnapshotProfileTests.test_invalid_observation_and_weights) ... ok
+test_isolated_data_abstains (test_profile.SnapshotProfileTests.test_isolated_data_abstains) ... ok
+test_missing_step_remains_unresolved (test_profile.SnapshotProfileTests.test_missing_step_remains_unresolved) ... ok
+test_numerical_range_failures_are_cli_input_errors (test_profile.SnapshotProfileTests.test_numerical_range_failures_are_cli_input_errors) ... ok
+test_reject_lossy_or_mixed_inputs (test_profile.SnapshotProfileTests.test_reject_lossy_or_mixed_inputs) ... ok
+test_replacement_with_and_without_handoff (test_profile.SnapshotProfileTests.test_replacement_with_and_without_handoff) ... ok
+test_stable_fixture_and_deterministic_identity (test_profile.SnapshotProfileTests.test_stable_fixture_and_deterministic_identity) ... ok
+test_tau_refusals (test_profile.SnapshotProfileTests.test_tau_refusals) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.439s
+
+OK

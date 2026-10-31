@@ -1,0 +1,10 @@
+PREFIX ripo: <https://example.org/ripo/0.1#>
+SELECT ?change ?entity ?delta ?unit ?validBefore ?validAfter ?recordedAt WHERE {
+  ?change a ripo:TransitionRecord ; ripo:beforeState ?b ;
+          ripo:afterState ?a ; ripo:recordedAt ?recordedAt .
+  ?b ripo:aboutEntity ?entity ; ripo:numericValue ?v0 ;
+     ripo:unit ?unit ; ripo:validAt ?validBefore .
+  ?a ripo:aboutEntity ?entity ; ripo:numericValue ?v1 ;
+     ripo:unit ?unit ; ripo:validAt ?validAfter .
+  BIND (?v1 - ?v0 AS ?delta)
+}

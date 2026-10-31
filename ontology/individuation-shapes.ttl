@@ -1,0 +1,35 @@
+@prefix r: <https://example.org/ripo-experimental/0.2#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+r:RunShape a sh:NodeShape ; sh:targetClass r:ExtractionRun ;
+ sh:property [ sh:path r:inputSHA256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+ sh:property [ sh:path r:algorithmVersion ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+ sh:property [ sh:path r:markovTime ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:double ; sh:minInclusive 0 ] .
+r:HypothesisShape a sh:NodeShape ; sh:targetClass r:IndividuationHypothesis ;
+ sh:property [ sh:path r:member ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+ sh:property [ sh:path r:observationStep ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+ sh:property [ sh:path prov:wasGeneratedBy ; sh:minCount 1 ; sh:maxCount 1 ; sh:class r:ExtractionRun ] .
+r:MembershipShape a sh:NodeShape ; sh:targetClass r:MembershipAssessment ;
+ sh:property [ sh:path r:aboutHypothesis ; sh:minCount 1 ; sh:maxCount 1 ; sh:class r:IndividuationHypothesis ] ;
+ sh:property [ sh:path r:member ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+ sh:property [ sh:path r:membershipValue ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:double ; sh:minInclusive 0 ; sh:maxInclusive 1 ] .
+r:BoundaryShape a sh:NodeShape ; sh:targetClass r:BoundaryRepresentation ;
+ sh:property [ sh:path r:aboutHypothesis ; sh:minCount 1 ; sh:maxCount 1 ; sh:class r:IndividuationHypothesis ] ;
+ sh:property [ sh:path r:displayLayout ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("grid" "circle") ] ;
+ sh:property [ sh:path r:sigma ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:double ; sh:minExclusive 0 ] ;
+ sh:property [ sh:path r:level ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:double ; sh:minExclusive 0 ; sh:maxExclusive 1 ] .
+r:LineageShape a sh:NodeShape ; sh:targetClass r:LineageAssertion ;
+ sh:property [ sh:path r:sourceHypothesis ; sh:minCount 1 ; sh:maxCount 1 ; sh:class r:IndividuationHypothesis ] ;
+ sh:property [ sh:path r:targetHypothesis ; sh:minCount 1 ; sh:maxCount 1 ; sh:class r:IndividuationHypothesis ] ;
+ sh:property [ sh:path prov:wasGeneratedBy ; sh:minCount 1 ; sh:maxCount 1 ; sh:class r:ExtractionRun ] ;
+ sh:property [ sh:path r:correspondenceKind ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("split" "merge" "split_merge" "handoff" "member_continuity") ] ;
+ sh:property [ sh:path r:evidenceJSON ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+ sh:sparql [ sh:message "Lineage must relate adjacent observation steps." ;
+  sh:select """PREFIX r: <https://example.org/ripo-experimental/0.2#>
+    SELECT $this WHERE {
+      $this r:sourceHypothesis/r:observationStep ?before ;
+            r:targetHypothesis/r:observationStep ?after .
+      FILTER (?after != ?before + 1)
+    }""" ] .

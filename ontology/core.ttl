@@ -1,0 +1,35 @@
+@prefix ripo: <https://example.org/ripo/0.1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<https://example.org/ripo/0.1> a owl:Ontology ;
+    rdfs:comment "Illustrative research vocabulary; not a published RIPO standard or an Inc encoding."@en .
+ripo:WorldProcess a owl:Class .
+ripo:InformationRecord a owl:Class ; rdfs:subClassOf prov:Entity .
+ripo:StateDescription a owl:Class ; rdfs:subClassOf ripo:InformationRecord .
+ripo:TransitionRecord a owl:Class ; rdfs:subClassOf ripo:InformationRecord .
+ripo:RelationDescription a owl:Class ; rdfs:subClassOf ripo:InformationRecord .
+ripo:EndpointParticipation a owl:Class ; rdfs:subClassOf ripo:InformationRecord .
+ripo:RoleLabel a owl:Class .
+ripo:Claim a owl:Class ; rdfs:subClassOf ripo:InformationRecord, rdf:Statement .
+ripo:Evidence a owl:Class ; rdfs:subClassOf ripo:InformationRecord .
+ripo:ObservationProcess a owl:Class ; rdfs:subClassOf ripo:WorldProcess, prov:Activity .
+ripo:Assessment a owl:Class ; rdfs:subClassOf ripo:InformationRecord .
+ripo:aboutEntity a owl:ObjectProperty .
+ripo:beforeState a owl:ObjectProperty ; rdfs:range ripo:StateDescription .
+ripo:afterState a owl:ObjectProperty ; rdfs:range ripo:StateDescription .
+ripo:hasParticipation a owl:ObjectProperty ; rdfs:range ripo:EndpointParticipation .
+ripo:hasEndpoint a owl:ObjectProperty .
+ripo:hasRole a owl:ObjectProperty ; rdfs:range ripo:RoleLabel .
+ripo:supportedBy a owl:ObjectProperty ; rdfs:range ripo:Evidence .
+ripo:assesses a owl:ObjectProperty ; rdfs:range ripo:Claim .
+ripo:validAt a owl:DatatypeProperty ; rdfs:range xsd:dateTime .
+ripo:recordedAt a owl:DatatypeProperty ; rdfs:range xsd:dateTime .
+ripo:numericValue a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+ripo:unit a owl:ObjectProperty .
+ripo:sign a owl:DatatypeProperty ; rdfs:range xsd:integer .
+ripo:multiplicity a owl:DatatypeProperty ; rdfs:range xsd:integer .
+ripo:assessmentStatus a owl:DatatypeProperty ; rdfs:range xsd:string .

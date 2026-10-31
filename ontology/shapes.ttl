@@ -1,0 +1,32 @@
+@prefix ripo: <https://example.org/ripo/0.1#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ripo:StateShape a sh:NodeShape ; sh:targetClass ripo:StateDescription ;
+    sh:property [ sh:path ripo:aboutEntity ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path ripo:numericValue ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ] ;
+    sh:property [ sh:path ripo:unit ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path ripo:validAt ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ; sh:pattern "(Z|[+]00:00)$" ] .
+
+ripo:TransitionShape a sh:NodeShape ; sh:targetClass ripo:TransitionRecord ;
+    sh:property [ sh:path ripo:beforeState ; sh:minCount 1 ; sh:maxCount 1 ; sh:class ripo:StateDescription ] ;
+    sh:property [ sh:path ripo:afterState ; sh:minCount 1 ; sh:maxCount 1 ; sh:class ripo:StateDescription ] ;
+    sh:property [ sh:path ripo:recordedAt ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ; sh:pattern "(Z|[+]00:00)$" ] ;
+    sh:sparql [
+        sh:message "Transition must keep subject and unit, and advance valid time." ;
+        sh:select """
+          PREFIX ripo: <https://example.org/ripo/0.1#>
+          SELECT $this WHERE {
+            $this ripo:beforeState ?b ; ripo:afterState ?a .
+            ?b ripo:aboutEntity ?be ; ripo:unit ?bu ; ripo:validAt ?bt .
+            ?a ripo:aboutEntity ?ae ; ripo:unit ?au ; ripo:validAt ?at .
+            FILTER (?be != ?ae || ?bu != ?au || ?bt >= ?at)
+          }
+        """
+    ] .
+
+ripo:EndpointShape a sh:NodeShape ; sh:targetClass ripo:EndpointParticipation ;
+    sh:property [ sh:path ripo:hasEndpoint ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path ripo:hasRole ; sh:minCount 1 ; sh:maxCount 1 ; sh:class ripo:RoleLabel ] ;
+    sh:property [ sh:path ripo:sign ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:in ( -1 0 1 ) ] ;
+    sh:property [ sh:path ripo:multiplicity ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] .
