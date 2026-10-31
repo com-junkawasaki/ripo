@@ -1,0 +1,715 @@
+{
+  "schema": "ripo.awai-market.v1",
+  "evidence_kind": "synthetic",
+  "assumptions": "All capacities, jobs, costs and reserves are invented, not fitted to observations or literature gains. One simultaneous 600-second window, deterministic feasibility only. GPU slots assume qualified hardware. Synthetic consent flags grant no authority.",
+  "units": {
+    "cpu": "logical_core",
+    "memory": "GiB",
+    "gpu": "qualified_slot",
+    "storage": "GiB_peak",
+    "network": "Mbps_reserved"
+  },
+  "window_seconds": 600,
+  "now_seconds": 1000,
+  "freshness_seconds": 60,
+  "nodes": [
+    {
+      "id": "sim-gpu-a",
+      "available": true,
+      "qualified": true,
+      "observed_seconds": 1000,
+      "capacity": {
+        "cpu": 8,
+        "memory": 24,
+        "gpu": 1,
+        "storage": 100,
+        "network": 100
+      },
+      "reserve": {
+        "cpu": 0.25,
+        "memory": 0.25,
+        "gpu": 0,
+        "storage": 0.2,
+        "network": 0.25
+      },
+      "kinds": [
+        "cpu",
+        "storage",
+        "gpu"
+      ]
+    },
+    {
+      "id": "sim-cpu-a",
+      "available": true,
+      "qualified": true,
+      "observed_seconds": 1000,
+      "capacity": {
+        "cpu": 8,
+        "memory": 16,
+        "gpu": 0,
+        "storage": 100,
+        "network": 100
+      },
+      "reserve": {
+        "cpu": 0.25,
+        "memory": 0.25,
+        "gpu": 0,
+        "storage": 0.2,
+        "network": 0.25
+      },
+      "kinds": [
+        "cpu",
+        "storage",
+        "private"
+      ]
+    },
+    {
+      "id": "sim-gpu-b",
+      "available": true,
+      "qualified": true,
+      "observed_seconds": 1000,
+      "capacity": {
+        "cpu": 8,
+        "memory": 24,
+        "gpu": 1,
+        "storage": 100,
+        "network": 100
+      },
+      "reserve": {
+        "cpu": 0.25,
+        "memory": 0.25,
+        "gpu": 0,
+        "storage": 0.2,
+        "network": 0.25
+      },
+      "kinds": [
+        "cpu",
+        "storage",
+        "gpu"
+      ]
+    },
+    {
+      "id": "sim-cpu-b",
+      "available": true,
+      "qualified": true,
+      "observed_seconds": 1000,
+      "capacity": {
+        "cpu": 8,
+        "memory": 16,
+        "gpu": 0,
+        "storage": 100,
+        "network": 100
+      },
+      "reserve": {
+        "cpu": 0.25,
+        "memory": 0.25,
+        "gpu": 0,
+        "storage": 0.2,
+        "network": 0.25
+      },
+      "kinds": [
+        "cpu",
+        "storage"
+      ]
+    },
+    {
+      "id": "sim-stale",
+      "available": true,
+      "qualified": true,
+      "observed_seconds": 0,
+      "capacity": {
+        "cpu": 8,
+        "memory": 16,
+        "gpu": 0,
+        "storage": 100,
+        "network": 100
+      },
+      "reserve": {
+        "cpu": 0.25,
+        "memory": 0.25,
+        "gpu": 0,
+        "storage": 0.2,
+        "network": 0.25
+      },
+      "kinds": [
+        "cpu",
+        "storage"
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "id": "J01",
+      "kind": "cpu",
+      "origin": "sim-cpu-a",
+      "value_points": 12,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 3,
+        "memory": 4,
+        "gpu": 0,
+        "storage": 4,
+        "network": 5
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J02",
+      "kind": "cpu",
+      "origin": "sim-cpu-b",
+      "value_points": 12,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 3,
+        "memory": 4,
+        "gpu": 0,
+        "storage": 4,
+        "network": 5
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-stale",
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b"
+      ]
+    },
+    {
+      "id": "J03",
+      "kind": "cpu",
+      "origin": "sim-cpu-a",
+      "value_points": 12,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 3,
+        "memory": 4,
+        "gpu": 0,
+        "storage": 4,
+        "network": 5
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J04",
+      "kind": "cpu",
+      "origin": "sim-cpu-b",
+      "value_points": 12,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 3,
+        "memory": 4,
+        "gpu": 0,
+        "storage": 4,
+        "network": 5
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J05",
+      "kind": "gpu",
+      "origin": "sim-cpu-a",
+      "value_points": 40,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 2,
+        "memory": 10,
+        "gpu": 1,
+        "storage": 8,
+        "network": 10
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J06",
+      "kind": "gpu",
+      "origin": "sim-cpu-b",
+      "value_points": 40,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 2,
+        "memory": 10,
+        "gpu": 1,
+        "storage": 8,
+        "network": 10
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J07",
+      "kind": "gpu",
+      "origin": "sim-cpu-a",
+      "value_points": 40,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 2,
+        "memory": 10,
+        "gpu": 1,
+        "storage": 8,
+        "network": 10
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J08",
+      "kind": "gpu",
+      "origin": "sim-cpu-b",
+      "value_points": 40,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 2,
+        "memory": 10,
+        "gpu": 1,
+        "storage": 8,
+        "network": 10
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J09",
+      "kind": "storage",
+      "origin": "sim-cpu-a",
+      "value_points": 18,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 1,
+        "memory": 2,
+        "gpu": 0,
+        "storage": 50,
+        "network": 20
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-stale",
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b"
+      ]
+    },
+    {
+      "id": "J10",
+      "kind": "storage",
+      "origin": "sim-cpu-b",
+      "value_points": 18,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 1,
+        "memory": 2,
+        "gpu": 0,
+        "storage": 50,
+        "network": 20
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J11",
+      "kind": "private",
+      "origin": "sim-cpu-a",
+      "value_points": 20,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 2,
+        "memory": 4,
+        "gpu": 0,
+        "storage": 4,
+        "network": 5
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": false,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-gpu-b": {
+          "consent": false,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": false,
+          "cost_points": 3
+        },
+        "sim-stale": {
+          "consent": false,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-cpu-a",
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    },
+    {
+      "id": "J12",
+      "kind": "cuda",
+      "origin": "sim-cpu-b",
+      "value_points": 40,
+      "deadline_seconds": 600,
+      "demand": {
+        "cpu": 2,
+        "memory": 10,
+        "gpu": 1,
+        "storage": 8,
+        "network": 10
+      },
+      "offers": {
+        "sim-gpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-a": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-gpu-b": {
+          "consent": true,
+          "cost_points": 3
+        },
+        "sim-cpu-b": {
+          "consent": true,
+          "cost_points": 1
+        },
+        "sim-stale": {
+          "consent": true,
+          "cost_points": 3
+        }
+      },
+      "directory_order": [
+        "sim-gpu-a",
+        "sim-gpu-b",
+        "sim-cpu-a",
+        "sim-cpu-b",
+        "sim-stale"
+      ]
+    }
+  ],
+  "exchange_snapshots": {
+    "schema": "ripo.snapshots.v1",
+    "directed": false,
+    "signed": false,
+    "arity": 2,
+    "relation_kind": "exchange",
+    "frames": [
+      {
+        "step": 0,
+        "ids": [
+          "sim-gpu-a",
+          "sim-cpu-a",
+          "sim-gpu-b",
+          "sim-cpu-b",
+          "sim-stale"
+        ],
+        "adjacency": [
+          [
+            0,
+            30,
+            1,
+            1,
+            0
+          ],
+          [
+            30,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            30,
+            0
+          ],
+          [
+            1,
+            1,
+            30,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "handoffs": []
+      }
+    ]
+  }
+}

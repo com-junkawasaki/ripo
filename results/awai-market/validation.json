@@ -1,0 +1,56 @@
+{
+  "date_jst": "2026-10-31",
+  "tracking_issue": "JUN-727",
+  "python": "3.12.11",
+  "platform": "Darwin arm64",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "checks": {
+    "unittest_discover": {
+      "passed": true,
+      "tests": 38
+    },
+    "market_reproduction": {
+      "passed": true,
+      "policies": 5,
+      "reserve_order_cases": 100,
+      "policies_per_sensitivity_case": 2
+    },
+    "existing_reproduction_script": {
+      "passed": true,
+      "commands": [
+        "python engine.py",
+        "python build.py",
+        "python scripts/validate_rdf.py",
+        "node test_viewer.cjs",
+        "python ripo.py fixture/extract"
+      ],
+      "numeric_outputs": "unchanged after removing seconds/experiment_seconds; timing-only outputs restored",
+      "jsonld_records": 710,
+      "rdf_triples": 3380,
+      "rdf_negative_controls": 3,
+      "viewer_dom_states": 720
+    },
+    "new_plot_visual_inspection": {
+      "passed": true,
+      "scope": "comparison.png only; not browser application visual QA"
+    }
+  },
+  "files_sha256": {
+    "market.py": "7a189ed0db6d8d2886d0e50589a4682d6e859b6c7906536855f5589b5ea160f1",
+    "test_market.py": "4edd70311927cc768990418bcccf0d199e5ce207424ba0f71fd0479deba3ecd1",
+    "examples/awai-market.json": "a2c8a9173248fa3a01b66611e121c81ec2a4a63de50e87d7c1ca2703d7381717",
+    "data/market-evidence.json": "819eaffb9ee4fe8e04102fa3751f87cd6d4a6f145309ce7498c19711182fc300",
+    "data/awai-snapshot-20261031.json": "3965f0a301646caf5102dc5a73bd50f5233864b3956d619a5ef13f81dcbd25f9",
+    "results/awai-market/result.json": "1c9b71ab741d1773bd73d9b65928013525d854b6702f6e1c4a1ead8fb96514a2",
+    "results/awai-market/comparison.png": "0306268630ccaa8423d2b90014104f1065a6e0f9adddf926347d299e4b2468d7"
+  },
+  "not_verified": [
+    "real workload improvement",
+    "representative 7-day baseline",
+    "GPU/energy/network performance",
+    "native runtime or scheduler deployment",
+    "merge or publication"
+  ]
+}

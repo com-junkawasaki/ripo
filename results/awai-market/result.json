@@ -1,0 +1,2481 @@
+{
+  "schema": "ripo.awai-market.v1.result",
+  "input_sha256": "4149ad6ce678a8e972559654cdc59af558747e24c47f0ada3f6c4011ceaca96e",
+  "evidence_sha256": "348c41326f5a8aed3609775e0e7ccb5e04f88d1888a883d8348034c2693ee5ff",
+  "snapshot_sha256": "39f9aaebf66e3f9523c93e8cb4e40dc8e424eb256702ef2bc85e8ce74f6f76fb",
+  "literature_recalculation": {
+    "uber_time_utilization": [
+      {
+        "city": "Boston",
+        "taxi_pct": 32.0,
+        "uber_pct": 46.1,
+        "taxi_period": "3 days in 2013",
+        "uber_period": "corresponding 3 days in 2015",
+        "utilization": {
+          "before": 32.0,
+          "after": 46.1,
+          "difference": 14.1,
+          "relative_change_pct": 44.0625
+        },
+        "online_hours_for_100_passenger_hours": {
+          "before": 312.5,
+          "after": 216.91973969631235,
+          "difference": -95.5802603,
+          "relative_change_pct": -30.5856833
+        }
+      },
+      {
+        "city": "San Francisco",
+        "taxi_pct": 38.5,
+        "uber_pct": 54.3,
+        "taxi_period": "July-October 2013",
+        "uber_period": "July-October 2015",
+        "utilization": {
+          "before": 38.5,
+          "after": 54.3,
+          "difference": 15.8,
+          "relative_change_pct": 41.03896104
+        },
+        "online_hours_for_100_passenger_hours": {
+          "before": 259.7402597402597,
+          "after": 184.1620626151013,
+          "difference": -75.57819713,
+          "relative_change_pct": -29.09760589
+        }
+      },
+      {
+        "city": "New York",
+        "taxi_pct": 49.5,
+        "uber_pct": 51.2,
+        "taxi_period": "2013",
+        "uber_period": "12 months ending December 1 2015",
+        "utilization": {
+          "before": 49.5,
+          "after": 51.2,
+          "difference": 1.7,
+          "relative_change_pct": 3.43434343
+        },
+        "online_hours_for_100_passenger_hours": {
+          "before": 202.02020202020202,
+          "after": 195.3125,
+          "difference": -6.70770202,
+          "relative_change_pct": -3.3203125
+        }
+      }
+    ],
+    "airbnb_search_counterfactuals": [
+      {
+        "comparison": "availability_only",
+        "metric": "accepted",
+        "before": 7.7,
+        "after": 18.2,
+        "difference": 10.5,
+        "relative_change_pct": 136.36363636
+      },
+      {
+        "comparison": "search_feature_bundle",
+        "metric": "accepted",
+        "before": 7.7,
+        "after": 24.3,
+        "difference": 16.6,
+        "relative_change_pct": 215.58441558
+      },
+      {
+        "comparison": "search_feature_bundle_rejection",
+        "metric": "reject_given_contact",
+        "before": 77.5,
+        "after": 31.8,
+        "difference": -45.7,
+        "relative_change_pct": -58.96774194
+      },
+      {
+        "comparison": "host_preference_ranking",
+        "metric": "accepted",
+        "before": 30.599999999999998,
+        "after": 33.6,
+        "difference": 3.0,
+        "relative_change_pct": 9.80392157
+      }
+    ],
+    "reported_airbnb_online_experiment": {
+      "source_id": "airbnb-maps2024",
+      "locator": "Haldar et al. 2024, section 3.1 final experiment, following Table 2",
+      "mechanism": "Bookability Filter: reduce low-booking-probability map pins, alpha=1; baseline up to 18 pins without filtering",
+      "identification": "authors report online randomized A/B experiment; not independently re-estimated here",
+      "control_searchers_reported": 34000000,
+      "treatment_searchers_reported": 34000000,
+      "uncancelled_bookings_relative_lift_pct": 1.9,
+      "five_star_trips_relative_lift_pct": 2.0,
+      "impressions_to_discovery_relative_change_pct": -16,
+      "clicks_to_discovery_relative_change_pct": -6.8,
+      "p_value_key_metrics_reported_upper_bound": 1e-05,
+      "raw_bookings_counts": null,
+      "standard_error": null,
+      "limits": "company-authored study; no user-level outcomes or booking counts supplied here; global booking-normalized lift, not 1.9 percentage points of occupancy or utilization. Other launched changes cannot be added arithmetically to this lift."
+    }
+  },
+  "observed_snapshot": {
+    "date_jst": "2026-10-31",
+    "sampled_nodes": 5,
+    "logical_cpu_installed": 50,
+    "installed_ram_GiB": 112.0,
+    "noncontemporaneous_idle_core_equivalent": 31.465,
+    "data_volumes_at_least_90pct": 3,
+    "qualified_offered_capacity": null,
+    "real_job_improvement": null,
+    "limitations": [
+      "short samples at different times; not a fleet utilization average",
+      "GPU, power, offered schedule, accepted job outcomes missing",
+      "CPU idle does not qualify memory, GPU, storage or network availability"
+    ]
+  },
+  "ripo_exchange_extraction": {
+    "schema": "ripo.snapshot-extraction.v0.3",
+    "run_sha256": "fe073d5d9a5d524ef28abc11d24051f0f840acea9a559643c8a484db58854c02",
+    "input_sha256": "51abbd3d5fe3368a9dbd6ff349ce207fada0c2092fb9ccce6747545230d3f912",
+    "profile": "ripo.snapshot-extraction.v0.3",
+    "tau": 1.0,
+    "time_semantics": "ordered observation steps; physical windows not supplied",
+    "relation_kind": "exchange",
+    "frames": [
+      {
+        "step": 0,
+        "ids": [
+          "sim-gpu-a",
+          "sim-cpu-a",
+          "sim-gpu-b",
+          "sim-cpu-b",
+          "sim-stale"
+        ],
+        "groups": [
+          [
+            "sim-gpu-a",
+            "sim-cpu-a"
+          ],
+          [
+            "sim-gpu-b",
+            "sim-cpu-b"
+          ],
+          [
+            "sim-stale"
+          ]
+        ],
+        "assessment": {
+          "labels": [
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          "score": 0.4412484512922977,
+          "gap": 0.07429619804771109,
+          "ties": 1,
+          "status": "candidate",
+          "evaluated": 15,
+          "isolated": [
+            4
+          ]
+        }
+      }
+    ],
+    "correspondences": [],
+    "interpretation": "candidate partitions and supplied correspondence evidence, not numerical identity",
+    "persistence": "canonical JSON + SHA-256 in this reference profile; not IPLD/CID",
+    "qualification": {
+      "input_origin": "caller_supplied_not_independently_verified",
+      "empirical_validation": false,
+      "causal_autonomy_inferred": false,
+      "kotoba_runtime_integrated": false
+    }
+  },
+  "synthetic_policies": [
+    {
+      "policy": "directory_once",
+      "assigned_jobs": 3,
+      "demand_jobs": 12,
+      "assigned_fraction": 0.25,
+      "demand_status": "synthetic_jobs_supplied",
+      "net_value_points": 37,
+      "assignments": [
+        [
+          "J01",
+          "sim-gpu-a"
+        ],
+        [
+          "J03",
+          "sim-gpu-a"
+        ],
+        [
+          "J11",
+          "sim-cpu-a"
+        ]
+      ],
+      "usage": {
+        "sim-gpu-a": {
+          "cpu": 6,
+          "memory": 8,
+          "gpu": 0,
+          "storage": 8,
+          "network": 10
+        },
+        "sim-cpu-a": {
+          "cpu": 2,
+          "memory": 4,
+          "gpu": 0,
+          "storage": 4,
+          "network": 5
+        },
+        "sim-gpu-b": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-cpu-b": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-stale": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        }
+      },
+      "offered_budget_utilization": {
+        "cpu": 0.3333333333333333,
+        "memory": 0.2,
+        "gpu": 0.0,
+        "storage": 0.0375,
+        "network": 0.05
+      },
+      "attempt_refusals": [
+        {
+          "job": "J02",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        },
+        {
+          "job": "J04",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J05",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J06",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J07",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J08",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J09",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        },
+        {
+          "job": "J10",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J12",
+          "node": "sim-gpu-a",
+          "reason": "incompatible_kind"
+        }
+      ],
+      "unassigned_jobs": [
+        "J02",
+        "J04",
+        "J05",
+        "J06",
+        "J07",
+        "J08",
+        "J09",
+        "J10",
+        "J12"
+      ],
+      "interpretation": "modeled reservations; no jobs executed or outcomes accepted"
+    },
+    {
+      "policy": "fresh_once",
+      "assigned_jobs": 3,
+      "demand_jobs": 12,
+      "assigned_fraction": 0.25,
+      "demand_status": "synthetic_jobs_supplied",
+      "net_value_points": 37,
+      "assignments": [
+        [
+          "J01",
+          "sim-gpu-a"
+        ],
+        [
+          "J02",
+          "sim-gpu-a"
+        ],
+        [
+          "J11",
+          "sim-cpu-a"
+        ]
+      ],
+      "usage": {
+        "sim-gpu-a": {
+          "cpu": 6,
+          "memory": 8,
+          "gpu": 0,
+          "storage": 8,
+          "network": 10
+        },
+        "sim-cpu-a": {
+          "cpu": 2,
+          "memory": 4,
+          "gpu": 0,
+          "storage": 4,
+          "network": 5
+        },
+        "sim-gpu-b": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-cpu-b": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-stale": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        }
+      },
+      "offered_budget_utilization": {
+        "cpu": 0.3333333333333333,
+        "memory": 0.2,
+        "gpu": 0.0,
+        "storage": 0.0375,
+        "network": 0.05
+      },
+      "attempt_refusals": [
+        {
+          "job": "J03",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J04",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J05",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J06",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J07",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J08",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J09",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J10",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        }
+      ],
+      "unassigned_jobs": [
+        "J03",
+        "J04",
+        "J05",
+        "J06",
+        "J07",
+        "J08",
+        "J09",
+        "J10",
+        "J12"
+      ],
+      "interpretation": "modeled reservations; no jobs executed or outcomes accepted"
+    },
+    {
+      "policy": "fresh_fifo",
+      "assigned_jobs": 7,
+      "demand_jobs": 12,
+      "assigned_fraction": 0.5833333333333334,
+      "demand_status": "synthetic_jobs_supplied",
+      "net_value_points": 89,
+      "assignments": [
+        [
+          "J01",
+          "sim-gpu-a"
+        ],
+        [
+          "J02",
+          "sim-gpu-a"
+        ],
+        [
+          "J03",
+          "sim-gpu-b"
+        ],
+        [
+          "J04",
+          "sim-gpu-b"
+        ],
+        [
+          "J09",
+          "sim-cpu-a"
+        ],
+        [
+          "J10",
+          "sim-cpu-b"
+        ],
+        [
+          "J11",
+          "sim-cpu-a"
+        ]
+      ],
+      "usage": {
+        "sim-gpu-a": {
+          "cpu": 6,
+          "memory": 8,
+          "gpu": 0,
+          "storage": 8,
+          "network": 10
+        },
+        "sim-cpu-a": {
+          "cpu": 3,
+          "memory": 6,
+          "gpu": 0,
+          "storage": 54,
+          "network": 25
+        },
+        "sim-gpu-b": {
+          "cpu": 6,
+          "memory": 8,
+          "gpu": 0,
+          "storage": 8,
+          "network": 10
+        },
+        "sim-cpu-b": {
+          "cpu": 1,
+          "memory": 2,
+          "gpu": 0,
+          "storage": 50,
+          "network": 20
+        },
+        "sim-stale": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        }
+      },
+      "offered_budget_utilization": {
+        "cpu": 0.6666666666666666,
+        "memory": 0.4,
+        "gpu": 0.0,
+        "storage": 0.375,
+        "network": 0.21666666666666667
+      },
+      "attempt_refusals": [
+        {
+          "job": "J02",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        },
+        {
+          "job": "J03",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J04",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J05",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J05",
+          "node": "sim-gpu-b",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J05",
+          "node": "sim-cpu-a",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J05",
+          "node": "sim-cpu-b",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J05",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        },
+        {
+          "job": "J06",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J06",
+          "node": "sim-gpu-b",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J06",
+          "node": "sim-cpu-a",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J06",
+          "node": "sim-cpu-b",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J06",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        },
+        {
+          "job": "J07",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J07",
+          "node": "sim-gpu-b",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J07",
+          "node": "sim-cpu-a",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J07",
+          "node": "sim-cpu-b",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J07",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        },
+        {
+          "job": "J08",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J08",
+          "node": "sim-gpu-b",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J08",
+          "node": "sim-cpu-a",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J08",
+          "node": "sim-cpu-b",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J08",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        },
+        {
+          "job": "J09",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        },
+        {
+          "job": "J09",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J09",
+          "node": "sim-gpu-b",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J10",
+          "node": "sim-gpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J10",
+          "node": "sim-gpu-b",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J10",
+          "node": "sim-cpu-a",
+          "reason": "concurrent_capacity"
+        },
+        {
+          "job": "J12",
+          "node": "sim-gpu-a",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J12",
+          "node": "sim-gpu-b",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J12",
+          "node": "sim-cpu-a",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J12",
+          "node": "sim-cpu-b",
+          "reason": "incompatible_kind"
+        },
+        {
+          "job": "J12",
+          "node": "sim-stale",
+          "reason": "stale_observation"
+        }
+      ],
+      "unassigned_jobs": [
+        "J05",
+        "J06",
+        "J07",
+        "J08",
+        "J12"
+      ],
+      "interpretation": "modeled reservations; no jobs executed or outcomes accepted"
+    },
+    {
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "demand_jobs": 12,
+      "assigned_fraction": 0.75,
+      "demand_status": "synthetic_jobs_supplied",
+      "net_value_points": 167,
+      "assignments": [
+        [
+          "J01",
+          "sim-cpu-a"
+        ],
+        [
+          "J02",
+          "sim-cpu-b"
+        ],
+        [
+          "J03",
+          "sim-gpu-a"
+        ],
+        [
+          "J04",
+          "sim-gpu-b"
+        ],
+        [
+          "J05",
+          "sim-gpu-a"
+        ],
+        [
+          "J08",
+          "sim-gpu-b"
+        ],
+        [
+          "J09",
+          "sim-cpu-a"
+        ],
+        [
+          "J10",
+          "sim-cpu-b"
+        ],
+        [
+          "J11",
+          "sim-cpu-a"
+        ]
+      ],
+      "usage": {
+        "sim-gpu-a": {
+          "cpu": 5,
+          "memory": 14,
+          "gpu": 1,
+          "storage": 12,
+          "network": 15
+        },
+        "sim-cpu-a": {
+          "cpu": 6,
+          "memory": 10,
+          "gpu": 0,
+          "storage": 58,
+          "network": 30
+        },
+        "sim-gpu-b": {
+          "cpu": 5,
+          "memory": 14,
+          "gpu": 1,
+          "storage": 12,
+          "network": 15
+        },
+        "sim-cpu-b": {
+          "cpu": 4,
+          "memory": 6,
+          "gpu": 0,
+          "storage": 54,
+          "network": 25
+        },
+        "sim-stale": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        }
+      },
+      "offered_budget_utilization": {
+        "cpu": 0.8333333333333334,
+        "memory": 0.7333333333333333,
+        "gpu": 1.0,
+        "storage": 0.425,
+        "network": 0.2833333333333333
+      },
+      "attempt_refusals": [],
+      "unassigned_jobs": [
+        "J06",
+        "J07",
+        "J12"
+      ],
+      "interpretation": "modeled reservations; no jobs executed or outcomes accepted"
+    },
+    {
+      "policy": "ripo_hard_boundary",
+      "assigned_jobs": 9,
+      "demand_jobs": 12,
+      "assigned_fraction": 0.75,
+      "demand_status": "synthetic_jobs_supplied",
+      "net_value_points": 167,
+      "assignments": [
+        [
+          "J01",
+          "sim-gpu-a"
+        ],
+        [
+          "J02",
+          "sim-cpu-b"
+        ],
+        [
+          "J03",
+          "sim-cpu-a"
+        ],
+        [
+          "J04",
+          "sim-cpu-b"
+        ],
+        [
+          "J05",
+          "sim-gpu-a"
+        ],
+        [
+          "J06",
+          "sim-gpu-b"
+        ],
+        [
+          "J09",
+          "sim-cpu-a"
+        ],
+        [
+          "J10",
+          "sim-gpu-b"
+        ],
+        [
+          "J11",
+          "sim-cpu-a"
+        ]
+      ],
+      "usage": {
+        "sim-gpu-a": {
+          "cpu": 5,
+          "memory": 14,
+          "gpu": 1,
+          "storage": 12,
+          "network": 15
+        },
+        "sim-cpu-a": {
+          "cpu": 6,
+          "memory": 10,
+          "gpu": 0,
+          "storage": 58,
+          "network": 30
+        },
+        "sim-gpu-b": {
+          "cpu": 3,
+          "memory": 12,
+          "gpu": 1,
+          "storage": 58,
+          "network": 30
+        },
+        "sim-cpu-b": {
+          "cpu": 6,
+          "memory": 8,
+          "gpu": 0,
+          "storage": 8,
+          "network": 10
+        },
+        "sim-stale": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        }
+      },
+      "offered_budget_utilization": {
+        "cpu": 0.8333333333333334,
+        "memory": 0.7333333333333333,
+        "gpu": 1.0,
+        "storage": 0.425,
+        "network": 0.2833333333333333
+      },
+      "attempt_refusals": [],
+      "unassigned_jobs": [
+        "J07",
+        "J08",
+        "J12"
+      ],
+      "interpretation": "modeled reservations; no jobs executed or outcomes accepted"
+    }
+  ],
+  "order_and_reserve_sensitivity": [
+    {
+      "reserve_fraction": 0,
+      "order_seed": 0,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 0,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 1,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 1,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 2,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 2,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 3,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 3,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 4,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 4,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 5,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 5,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 6,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 6,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 7,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 7,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 8,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 8,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 9,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 9,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 10,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 10,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 11,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 11,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 12,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 12,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 13,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 13,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 14,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 14,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 15,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 15,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 16,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 16,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 17,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 17,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 18,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 18,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 19,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0,
+      "order_seed": 19,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 0,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 0,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 1,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 1,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 2,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 2,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 3,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 3,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 4,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 4,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 5,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 5,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 6,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 6,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 7,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 7,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 8,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 8,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 9,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 9,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 10,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 10,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 11,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 11,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 12,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 12,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 13,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 142
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 13,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 14,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 14,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 15,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 15,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 16,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 16,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 17,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 17,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 18,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 18,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 19,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0.1,
+      "order_seed": 19,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 169
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 0,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 0,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 1,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 1,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 2,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 2,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 3,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 3,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 4,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 4,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 5,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 126
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 5,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 6,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 6,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 7,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 7,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 8,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 8,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 9,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 9,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 10,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 126
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 10,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 11,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 11,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 12,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 12,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 13,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 142
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 13,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 14,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 14,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 15,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 8,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 15,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 16,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 159
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 16,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 17,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 163
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 17,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 18,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 18,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 19,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 9,
+      "net_value_points": 161
+    },
+    {
+      "reserve_fraction": 0.25,
+      "order_seed": 19,
+      "policy": "optimized",
+      "assigned_jobs": 9,
+      "net_value_points": 167
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 0,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 98
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 0,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 1,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 126
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 1,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 2,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 78
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 2,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 3,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 104
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 3,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 4,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 70
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 4,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 5,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 68
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 5,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 6,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 106
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 6,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 7,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 132
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 7,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 8,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 98
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 8,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 9,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 106
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 9,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 10,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 68
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 10,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 11,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 78
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 11,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 12,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 104
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 12,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 13,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 96
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 13,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 14,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 126
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 14,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 15,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 70
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 15,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 16,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 106
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 16,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 17,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 122
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 17,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 18,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 104
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 18,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 19,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 6,
+      "net_value_points": 124
+    },
+    {
+      "reserve_fraction": 0.4,
+      "order_seed": 19,
+      "policy": "optimized",
+      "assigned_jobs": 6,
+      "net_value_points": 138
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 0,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 46
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 0,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 1,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 50
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 1,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 2,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 63
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 2,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 3,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 63
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 3,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 4,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 63
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 4,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 5,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 42
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 5,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 6,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 69
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 6,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 7,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 65
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 7,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 8,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 46
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 8,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 9,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 9,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 10,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 61
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 10,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 11,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 69
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 11,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 12,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 69
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 12,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 13,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 44
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 13,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 14,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 48
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 14,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 15,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 44
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 15,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 16,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 16,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 17,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 52
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 17,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 18,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 5,
+      "net_value_points": 65
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 18,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 19,
+      "policy": "fresh_fifo",
+      "assigned_jobs": 4,
+      "net_value_points": 50
+    },
+    {
+      "reserve_fraction": 0.6,
+      "order_seed": 19,
+      "policy": "optimized",
+      "assigned_jobs": 5,
+      "net_value_points": 71
+    }
+  ],
+  "boundary_failure_control": [
+    {
+      "policy": "optimized",
+      "assigned_jobs": 1,
+      "demand_jobs": 1,
+      "assigned_fraction": 1.0,
+      "demand_status": "synthetic_jobs_supplied",
+      "net_value_points": 37,
+      "assignments": [
+        [
+          "J05",
+          "sim-gpu-b"
+        ]
+      ],
+      "usage": {
+        "sim-gpu-a": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-cpu-a": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-gpu-b": {
+          "cpu": 2,
+          "memory": 10,
+          "gpu": 1,
+          "storage": 8,
+          "network": 10
+        },
+        "sim-cpu-b": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-stale": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        }
+      },
+      "offered_budget_utilization": {
+        "cpu": 0.1111111111111111,
+        "memory": 0.23809523809523808,
+        "gpu": 1.0,
+        "storage": 0.03333333333333333,
+        "network": 0.044444444444444446
+      },
+      "attempt_refusals": [],
+      "unassigned_jobs": [],
+      "interpretation": "modeled reservations; no jobs executed or outcomes accepted"
+    },
+    {
+      "policy": "ripo_hard_boundary",
+      "assigned_jobs": 0,
+      "demand_jobs": 1,
+      "assigned_fraction": 0.0,
+      "demand_status": "synthetic_jobs_supplied",
+      "net_value_points": 0,
+      "assignments": [],
+      "usage": {
+        "sim-gpu-a": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-cpu-a": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-gpu-b": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-cpu-b": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        },
+        "sim-stale": {
+          "cpu": 0,
+          "memory": 0,
+          "gpu": 0,
+          "storage": 0,
+          "network": 0
+        }
+      },
+      "offered_budget_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "gpu": 0.0,
+        "storage": 0.0,
+        "network": 0.0
+      },
+      "attempt_refusals": [],
+      "unassigned_jobs": [
+        "J05"
+      ],
+      "interpretation": "modeled reservations; no jobs executed or outcomes accepted"
+    }
+  ],
+  "boundary_probe_status": "computed",
+  "empty_demand_control": {
+    "policy": "optimized",
+    "assigned_jobs": 0,
+    "demand_jobs": 0,
+    "assigned_fraction": null,
+    "demand_status": "explicit_empty_synthetic_demand",
+    "net_value_points": 0,
+    "assignments": [],
+    "usage": {
+      "sim-gpu-a": {
+        "cpu": 0,
+        "memory": 0,
+        "gpu": 0,
+        "storage": 0,
+        "network": 0
+      },
+      "sim-cpu-a": {
+        "cpu": 0,
+        "memory": 0,
+        "gpu": 0,
+        "storage": 0,
+        "network": 0
+      },
+      "sim-gpu-b": {
+        "cpu": 0,
+        "memory": 0,
+        "gpu": 0,
+        "storage": 0,
+        "network": 0
+      },
+      "sim-cpu-b": {
+        "cpu": 0,
+        "memory": 0,
+        "gpu": 0,
+        "storage": 0,
+        "network": 0
+      },
+      "sim-stale": {
+        "cpu": 0,
+        "memory": 0,
+        "gpu": 0,
+        "storage": 0,
+        "network": 0
+      }
+    },
+    "offered_budget_utilization": {
+      "cpu": 0.0,
+      "memory": 0.0,
+      "gpu": 0.0,
+      "storage": 0.0,
+      "network": 0.0
+    },
+    "attempt_refusals": [],
+    "unassigned_jobs": [],
+    "interpretation": "modeled reservations; no jobs executed or outcomes accepted"
+  },
+  "qualifications": {
+    "real_jobs_executed": 0,
+    "causal_awai_improvement_estimated": false,
+    "kotoba_native_qualified": false,
+    "cid_persistence": false
+  }
+}
