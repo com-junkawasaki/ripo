@@ -83,7 +83,7 @@ def sample():
 def get_json(port, path, timeout=3):
     c = http.client.HTTPConnection('127.0.0.1', port, timeout=timeout)
     try:
-        c.request('GET', path); r = c.getresponse()
+        c.request('GET', path, headers={'Connection': 'close'}); r = c.getresponse()
         if r.status != 200:
             raise RuntimeError(f'GET {path}: HTTP {r.status}')
         return json.loads(r.read(65536))
@@ -149,7 +149,7 @@ def remote_run(config):
         def request():
             try:
                 connection.request('POST', '/v1/chat/completions', payload,
-                                   {'Content-Type': 'application/json'})
+                                   {'Content-Type': 'application/json', 'Connection': 'close'})
                 response = connection.getresponse()
                 raw = response.read(262144)
                 if response.status != 200:
