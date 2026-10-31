@@ -1,0 +1,111 @@
+{
+  "planned_trials": 8,
+  "completed_trials": 4,
+  "status": "stopped_early",
+  "arms": {
+    "current_default": {
+      "n": 2,
+      "seconds": [
+        5.545774457976222,
+        5.5166946249082685
+      ],
+      "mean_seconds": 5.531234541442245
+    },
+    "explicit_cache_true": {
+      "n": 2,
+      "seconds": [
+        5.512545040808618,
+        5.548183834180236
+      ],
+      "mean_seconds": 5.530364437494427
+    }
+  },
+  "descriptive_latency_reduction_pct": 0.015730736805663614,
+  "qualified_awai_improvement_pct": null,
+  "interpretation": "small technical replay; no natural-demand or fleet causal estimate",
+  "customer_accepted_outcomes": null,
+  "date_jst": "2026-10-31",
+  "tracking": "AWAI-127",
+  "node_count": 1,
+  "real_model_http_responses": 4,
+  "real_job_scope": "one internal report-extraction payload replayed; not customer-demand outcomes",
+  "input_tokens_per_request": 709,
+  "output_tokens_per_request": 49,
+  "cached_tokens_per_request": 705,
+  "processed_prompt_tokens_per_request": 4,
+  "mechanical_quality_passes": 4,
+  "admission_stop": {
+    "event": "stop",
+    "reason": [
+      "backend_not_single_idle_slot"
+    ],
+    "phase": "admission"
+  },
+  "observed_proxies": {
+    "samples": 32,
+    "cpu_idle_pct_min": 91.67,
+    "memory_pressure_free_pct_min": 40.0,
+    "wired_compressor_pct_max": 57.163143157958984,
+    "swap_growth_MiB": 0.0,
+    "disk_free_GiB_min": 70.41949462890625,
+    "thermal_warnings_observed": 0
+  },
+  "unmeasured": [
+    "GPU busy/headroom",
+    "watts/energy per accepted job",
+    "foreground user latency",
+    "7-day baseline",
+    "qualified offered capacity",
+    "natural/customer accepted demand",
+    "two-node placement/redundancy"
+  ],
+  "host_reservations_enforced": false,
+  "model_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+  "launcher_sha256": "c43cc7da9fd095f4602cd52200c04a35bfefb0bf84a108821b9e486a90424104",
+  "model_bytes": 5946648928,
+  "interrupted_runs": [
+    {
+      "id": "initial-launch",
+      "records": 0,
+      "accepted_for_comparison": false
+    },
+    {
+      "id": "forced-off-on",
+      "responses": 2,
+      "off_seconds": 19.35557220876217,
+      "on_seconds": 5.505945041775703,
+      "quality_passes": 2,
+      "accepted_for_current_default_comparison": false,
+      "reason": "missing terminal post-slot record; forced off is not production default"
+    },
+    {
+      "id": "default-before-connection-close",
+      "responses": 3,
+      "quality_passes": 3,
+      "accepted_for_comparison": false,
+      "reason": "post-slot timeout; stopped"
+    }
+  ],
+  "yataverse": {
+    "default_origin_status": "DNS failure",
+    "cid_subdomain_status": "TLS handshake failure",
+    "existing_interim_reader_status": "12-second timeout",
+    "reader_source_revision": "1bce1f6c442032273995742c76bdc298249a9112",
+    "verified_delivery_job_improvement_pct": null,
+    "remote_bytes_verified": false,
+    "tracking_blocker": "JUN-228"
+  },
+  "provenance": {
+    "protocol_sha256": "1092999dac7478ff93207643c41fea92a3b0a56ff1d0e517b3c7748b24a38844",
+    "raw_trial_sha256": [
+      "81ac4ebcfc4540c3b06d4d2307ba50307429a657ab98456e23e66c17c7502ff2",
+      "da01c340020a2cbafcbf7be4ca9e656e4c9c460478e1b8148a942695085e8f1a",
+      "45664049c7665c689fd6264e809d560f91c4ecaee89db45d172b1dff59799009",
+      "ff1124b37b518b3b9ca23a6de248bedb806979ab260142c0ab2937a44f5d97dd",
+      "b2f99e7b692b3571ce3a75ae813b4ce27dd43bd82b6d2764b37fe260b5a9faae"
+    ],
+    "driver_source_sha256": "bf0fd634415d8c6e47cf8ce8cb0f636106b2faf3d9e2483e1db0baa63d739d63",
+    "full_raw_evidence": "private workspace; hostnames, addresses and raw OS observations excluded",
+    "merge_pr2": "42e7c4c8843ca6d8ff65ea2bd1b057294624bdcc"
+  }
+}

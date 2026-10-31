@@ -1,0 +1,165 @@
+[
+  {
+    "index": 0,
+    "terminal": {
+      "event": "complete",
+      "trials": 1
+    },
+    "results": [
+      {
+        "event": "trial_result",
+        "trial": 0,
+        "cache_prompt": null,
+        "seconds": 5.545774457976222,
+        "quality_pass": true,
+        "output": "{\n  \"cpu_reserve_pct\": 25,\n  \"memory_reserve_pct\": 25,\n  \"gpu_busy\": \"unmeasured\",\n  \"energy_per_job\": \"unmeasured\"\n}",
+        "usage": {
+          "completion_tokens": 49,
+          "prompt_tokens": 709,
+          "total_tokens": 758,
+          "prompt_tokens_details": {
+            "cached_tokens": 705
+          }
+        },
+        "timings": {
+          "cache_n": 705,
+          "prompt_n": 4,
+          "prompt_ms": 580.897,
+          "prompt_per_token_ms": 145.22425,
+          "prompt_per_second": 6.885902320032638,
+          "predicted_n": 49,
+          "predicted_ms": 4911.093,
+          "predicted_per_token_ms": 102.3144375,
+          "predicted_per_second": 9.773791699729571
+        },
+        "finish_reason": "stop",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "terminal": {
+      "event": "complete",
+      "trials": 1
+    },
+    "results": [
+      {
+        "event": "trial_result",
+        "trial": 1,
+        "cache_prompt": true,
+        "seconds": 5.512545040808618,
+        "quality_pass": true,
+        "output": "{\n  \"cpu_reserve_pct\": 25,\n  \"memory_reserve_pct\": 25,\n  \"gpu_busy\": \"unmeasured\",\n  \"energy_per_job\": \"unmeasured\"\n}",
+        "usage": {
+          "completion_tokens": 49,
+          "prompt_tokens": 709,
+          "total_tokens": 758,
+          "prompt_tokens_details": {
+            "cached_tokens": 705
+          }
+        },
+        "timings": {
+          "cache_n": 705,
+          "prompt_n": 4,
+          "prompt_ms": 595.96,
+          "prompt_per_token_ms": 148.99,
+          "prompt_per_second": 6.711859856366199,
+          "predicted_n": 49,
+          "predicted_ms": 4905.473,
+          "predicted_per_token_ms": 102.19735416666667,
+          "predicted_per_second": 9.784989133565713
+        },
+        "finish_reason": "stop",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "terminal": {
+      "event": "complete",
+      "trials": 1
+    },
+    "results": [
+      {
+        "event": "trial_result",
+        "trial": 2,
+        "cache_prompt": true,
+        "seconds": 5.548183834180236,
+        "quality_pass": true,
+        "output": "{\n  \"cpu_reserve_pct\": 25,\n  \"memory_reserve_pct\": 25,\n  \"gpu_busy\": \"unmeasured\",\n  \"energy_per_job\": \"unmeasured\"\n}",
+        "usage": {
+          "completion_tokens": 49,
+          "prompt_tokens": 709,
+          "total_tokens": 758,
+          "prompt_tokens_details": {
+            "cached_tokens": 705
+          }
+        },
+        "timings": {
+          "cache_n": 705,
+          "prompt_n": 4,
+          "prompt_ms": 603.081,
+          "prompt_per_token_ms": 150.77025,
+          "prompt_per_second": 6.632608223439306,
+          "predicted_n": 49,
+          "predicted_ms": 4933.413,
+          "predicted_per_token_ms": 102.77943749999999,
+          "predicted_per_second": 9.729572610280146
+        },
+        "finish_reason": "stop",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "terminal": {
+      "event": "complete",
+      "trials": 1
+    },
+    "results": [
+      {
+        "event": "trial_result",
+        "trial": 3,
+        "cache_prompt": null,
+        "seconds": 5.5166946249082685,
+        "quality_pass": true,
+        "output": "{\n  \"cpu_reserve_pct\": 25,\n  \"memory_reserve_pct\": 25,\n  \"gpu_busy\": \"unmeasured\",\n  \"energy_per_job\": \"unmeasured\"\n}",
+        "usage": {
+          "completion_tokens": 49,
+          "prompt_tokens": 709,
+          "total_tokens": 758,
+          "prompt_tokens_details": {
+            "cached_tokens": 705
+          }
+        },
+        "timings": {
+          "cache_n": 705,
+          "prompt_n": 4,
+          "prompt_ms": 590.763,
+          "prompt_per_token_ms": 147.69075,
+          "prompt_per_second": 6.770904745219318,
+          "predicted_n": 49,
+          "predicted_ms": 4915.124,
+          "predicted_per_token_ms": 102.39841666666666,
+          "predicted_per_second": 9.765776000768241
+        },
+        "finish_reason": "stop",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "terminal": {
+      "event": "stop",
+      "reason": [
+        "backend_not_single_idle_slot"
+      ],
+      "phase": "admission"
+    },
+    "results": []
+  }
+]

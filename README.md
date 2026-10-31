@@ -49,6 +49,12 @@ points and reservation ratios are not actual revenue, GPU utilization, job
 completion or Awai improvement. No real jobs are dispatched and no host
 permissions are granted. The new controls are included in unittest discovery.
 
+The [AWAI-127 live pilot](docs/AWAI-LIVE-20261031.md) records bounded native
+backend replays, observed headroom proxies, interrupted runs and the unavailable
+Yataverse reader. Seven measurement controls and two incomplete-evidence analysis
+controls bring unittest discovery to 49 tests. This does not qualify a live
+scheduler, hard resource reservations, natural demand or fleet improvement.
+
 ### Original snapshot CLI
 
 ```sh
