@@ -6,7 +6,8 @@ class PilotControls(unittest.TestCase):
     def test_remote_helper_compiles_and_invokes_collection(self):
         program = remote_program({'port': 18094})
         compile(program, 'test-helper', 'exec')
-        self.assertTrue(program.endswith("remote_run({'port': 18094})\n"))
+        self.assertIn("remote_run({'port': 18094})", program)
+        self.assertIn("'remote_exception'", program)
 
     def test_empty_or_partial_evidence_cannot_pass(self):
         with self.assertRaisesRegex(ValueError, 'empty'):

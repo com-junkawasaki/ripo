@@ -98,7 +98,8 @@ def emit(value):
 def remote_program(config):
     source = Path(__file__).read_text()
     source = source.rsplit("\nif __name__ == '__main__':", 1)[0]
-    source += '\nremote_run(' + repr(config) + ')\n'
+    source += '\ntry:\n    remote_run(' + repr(config) + ')\n'
+    source += "except Exception as error:\n    emit({'event':'stop','reason':['remote_exception'],'error':type(error).__name__,'detail':str(error)[:160]})\n"
     compile(source, 'remote-measurement-helper', 'exec')
     return source
 
@@ -126,7 +127,8 @@ def remote_run(config):
     model = models['data'][0]['id']
     if 'Ternary-Bonsai-2-27B-PTQ1_0.gguf' not in model:
         emit({'event': 'stop', 'reason': ['unexpected_model']}); return
-    for index, use_cache in enumerate(config['cache_sequence']):
+    for local_index, use_cache in enumerate(config['cache_sequence']):
+        index = config.get('trial_offset', 0) + local_index
         pre = sample()
         emit({'event': 'pre_sample', 'trial': index, 'sample': pre})
         why = guard_reasons(pre, baseline_swap)
@@ -139,6 +141,8 @@ def remote_run(config):
                 'temperature': 0, 'seed': 42, 'cache_prompt': use_cache, 'stream': False,
                 'chat_template_kwargs': {'enable_thinking': False},
                 'response_format': {'type': 'json_object'}}
+        if use_cache is None:
+            del body['cache_prompt']  # measure the server's actual default
         payload = json.dumps(body).encode()
         connection = http.client.HTTPConnection('127.0.0.1', port, timeout=90)
         start = time.monotonic()
@@ -188,7 +192,7 @@ def remote_run(config):
         finally:
             pool.shutdown(wait=False, cancel_futures=True)
         # Disconnect/timeout is never proof of server-side cancellation.
-        after = get_json(port, '/slots')
+        after = get_json(port, '/slots', timeout=10)
         emit({'event': 'post_slots', 'trial': index,
               'slots': [{k: s.get(k) for k in ['id', 'is_processing', 'n_ctx']} for s in after]})
         if violations or any(s.get('is_processing') is not False for s in after):
@@ -205,12 +209,18 @@ def main():
     p.add_argument('--protocol', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--execute', action='store_true', required=True)
+    p.add_argument('--trial-index', type=int)
     args = p.parse_args()
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._@-]*', args.ssh_host):
         p.error('invalid configured SSH host')
     if not re.fullmatch(r'100\.\d+\.\d+\.\d+', args.tailscale_address):
         p.error('explicit Tailscale IPv4 address required')
     cfg = json.loads(args.protocol.read_text())
+    if args.trial_index is not None:
+        if not 0 <= args.trial_index < len(cfg['cache_sequence']):
+            p.error('trial index outside registered sequence')
+        cfg['trial_offset'] = args.trial_index
+        cfg['cache_sequence'] = [cfg['cache_sequence'][args.trial_index]]
     code = remote_program(cfg)
     cmd = ['ssh', '-oBatchMode=yes', '-oStrictHostKeyChecking=yes', '-oConnectTimeout=5',
            '-oServerAliveInterval=5', '-oServerAliveCountMax=2',
@@ -232,11 +242,15 @@ def main():
             except ValueError:
                 print('non-JSON remote output; evidence unqualified', flush=True)
         error = process.stderr.read(2000)
+        args.output.with_suffix(args.output.suffix + '.stderr').write_text(error)
         status = process.wait()
         if status:
             raise SystemExit(f'SSH failed ({status}): {error[:200]}')
         try:
-            print('Measurement terminal state: ' + evidence_status(events), flush=True)
+            state = evidence_status(events)
+            print('Measurement terminal state: ' + state, flush=True)
+            if state == 'stop':
+                raise SystemExit(3)
         except ValueError as e:
             raise SystemExit(str(e))
 
