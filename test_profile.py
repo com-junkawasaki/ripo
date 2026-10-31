@@ -1,10 +1,43 @@
 from copy import deepcopy
 import json
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
 import unittest
 from ripo import extract, fixture, validate_dataset
 
 
 class SnapshotProfileTests(unittest.TestCase):
+    def test_every_advertised_fixture_is_extractable(self):
+        for name in ('stable','replacement','copy','split_merge','common_driver','open_system'):
+            with self.subTest(name=name):
+                data = fixture(name)
+                result = extract(data)
+                self.assertEqual(len(result['frames']), 6)
+                if name == 'common_driver':
+                    self.assertEqual([len(f['groups']) for f in result['frames']], [8]*6)
+        # Fixture construction does not relax validation for external matrices.
+        data = fixture('common_driver')
+        data['frames'][0]['adjacency'][0][1] += 1e-15
+        with self.assertRaisesRegex(ValueError, 'symmetric'):
+            extract(data)
+
+    def test_numerical_range_failures_are_cli_input_errors(self):
+        for weight, tau in ((1e308, 1), (1, 1e308), (10**1000, 1)):
+            with self.subTest(weight=str(weight)[:10], tau=tau), tempfile.TemporaryDirectory() as tmp:
+                data = fixture(); data['frames'] = data['frames'][:1]
+                data['frames'][0]['adjacency'] = [[0 if i == j else weight for j in range(8)] for i in range(8)]
+                source, dest = Path(tmp)/'input.json', Path(tmp)/'output.json'
+                source.write_text(json.dumps(data))
+                result = subprocess.run([sys.executable, str(Path(__file__).with_name('ripo.py')),
+                    'extract', str(source), '--tau', str(tau), '--output', str(dest)],
+                    capture_output=True, text=True)
+                self.assertEqual(result.returncode, 2, result.stderr)
+                self.assertIn('ripo:', result.stderr)
+                self.assertNotIn('Traceback', result.stderr)
+                self.assertFalse(dest.exists())
+
     def test_stable_fixture_and_deterministic_identity(self):
         a = extract(fixture())
         self.assertEqual(a, extract(json.loads(json.dumps(fixture()))))
@@ -52,5 +85,5 @@ class SnapshotProfileTests(unittest.TestCase):
         self.assertIsNone(r['score']);self.assertEqual(r['status'],'no_relational_evidence')
 
     def test_tau_refusals(self):
-        for tau in (True,-1,float('inf'),float('nan')):
+        for tau in (True,-1,float('inf'),float('nan'),10**1000):
             with self.assertRaises(ValueError):extract(fixture(),tau)

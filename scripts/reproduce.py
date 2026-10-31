@@ -27,4 +27,4 @@ run(['node','test_viewer.cjs'], 'viewer-test.json')
 run([sys.executable,'ripo.py','fixture','--scenario','replacement','--output','examples/replacement.json'])
 run([sys.executable,'ripo.py','extract','examples/replacement.json','--tau','1',
      '--output','results/replacement-profile.json'])
-print('24 Python tests, RDF/SHACL controls, SPARQL, viewer logic and CLI reproduction passed.')
+print('Python tests, RDF/SHACL controls, SPARQL, viewer logic and CLI reproduction passed.')

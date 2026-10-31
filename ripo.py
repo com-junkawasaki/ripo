@@ -47,8 +47,12 @@ def validate_dataset(data):
         for i, row in enumerate(matrix):
             if not isinstance(row, list) or len(row) != len(ids):
                 raise ValueError('square adjacency required')
-            if any(type(v) not in (int, float) or not math.isfinite(v) or v < 0 for v in row):
-                raise ValueError('finite nonnegative numeric weights required')
+            try:
+                valid = all(type(v) in (int, float) and math.isfinite(v) and v >= 0 for v in row)
+            except OverflowError:
+                valid = False
+            if not valid:
+                raise ValueError('finite nonnegative floating-point weights required')
             if row[i] != 0:
                 raise ValueError('self loops are outside this profile')
         if any(matrix[i][j] != matrix[j][i] for i in range(len(ids)) for j in range(len(ids))):
@@ -69,7 +73,11 @@ def validate_dataset(data):
 
 def extract(data, tau=1.0):
     validate_dataset(data)
-    if type(tau) not in (int, float) or not math.isfinite(tau) or tau < 0:
+    try:
+        valid_tau = type(tau) in (int, float) and math.isfinite(tau) and tau >= 0
+    except OverflowError:
+        valid_tau = False
+    if not valid_tau:
         raise ValueError('finite nonnegative Markov time required')
     tau = float(tau)
     input_sha = hashlib.sha256(canonical_bytes(data)).hexdigest()
@@ -106,10 +114,21 @@ def extract(data, tau=1.0):
 
 def fixture(name='stable'):
     scenario = next(s for s in scenarios() if s['key'] == name)
+    frames = []
+    for frame in scenario['frames']:
+        adjacency = [row.copy() for row in frame['adjacency']]
+        if name == 'common_driver':
+            # corrcoef can differ across the diagonal at roundoff scale. The
+            # generated fixture explicitly chooses the upper triangle once;
+            # caller-supplied matrices still require exact symmetry.
+            for i in range(len(adjacency)):
+                for j in range(i + 1, len(adjacency)):
+                    adjacency[j][i] = adjacency[i][j]
+        frames.append({'step': frame['t'], 'ids': frame['ids'], 'adjacency': adjacency,
+                       'handoffs': frame['handoffs']})
     return {'schema': 'ripo.snapshots.v1', 'directed': False, 'signed': False,
             'arity': 2, 'relation_kind': 'correlation' if name == 'common_driver' else 'exchange',
-            'frames': [{'step': f['t'], 'ids': f['ids'], 'adjacency': f['adjacency'],
-                        'handoffs': f['handoffs']} for f in scenario['frames']]}
+            'frames': frames}
 
 
 def main():

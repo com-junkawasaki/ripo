@@ -12,7 +12,7 @@ An independent research specification and executable reference model for **Relat
 - [Alignment policy](docs/ALIGNMENT.md): RDF/OWL/SHACL/PROV and candidate BFO/CCO correspondences.
 - [Computed results](results/experiment.json), [record export](results/hypotheses.jsonld), [test report](results/tests.txt), [RDF check](results/rdf-validation.json).
 - [Offline viewer](viewer.html): download/clone and open locally; GitHub's file view does not run the app. No hosting or website release is configured.
-- [Companion article draft](https://github.com/com-junkawasaki/webmaster/pull/27). The website has not been merged or published by this work.
+- [Companion article and source review](https://github.com/com-junkawasaki/webmaster/pull/27). Website delivery is tracked separately in JUN-653.
 
 ## Reproduce
 
@@ -27,7 +27,7 @@ python scripts/validate_rdf.py
 node test_viewer.cjs
 ```
 
-The 16 recovered numeric tests and eight snapshot-interface tests exercise the model, probability conservation, permutation/weight-scale invariance, copy versus handoff, split/merge, missing observations and refusal of unsupported inputs. The DOM shim checks 720 scenario/time/scale/layout/width states and is not pixel/layout QA. All runtime computation, exports and the viewer operate without network access after dependency installation. Python is a scientific reference, not a Kotoba native qualification gate. No JVM/nbb path or CI workflow is included.
+The 16 recovered numeric tests and ten snapshot-interface tests exercise the model, probability conservation, permutation/weight-scale invariance, copy versus handoff, split/merge, missing observations and refusal of unsupported inputs. The DOM shim checks 720 scenario/time/scale/layout/width states and is not pixel/layout QA. All runtime computation, exports and the viewer operate without network access after dependency installation. Python is a scientific reference, not a Kotoba native qualification gate. No JVM/nbb path or CI workflow is included.
 
 ## Supply snapshots
 
@@ -38,7 +38,7 @@ python ripo.py extract examples/replacement.json --tau 1 --output results/replac
 
 The explicit input format is `ripo.snapshots.v1`: `directed:false`, `signed:false`, `arity:2`, one `relation_kind` (`exchange`, `similarity`, `correlation`) and a nonempty `frames` array. Each frame contains `step`, unique `ids`, a square symmetric nonnegative `adjacency` and explicit `handoffs`. See the [complete example](examples/replacement.json).
 
-Snapshots contain at most eight observations. Unsupported signed/directed/higher-arity input fails closed; it is not converted to a clique or another graph. Steps are ordered observations, not elapsed seconds. Physical observation windows and construction from raw events remain study-specific. A gap produces `observation_gap_unresolved`. Observation IDs and supplied handoffs are input assumptions; this program does not authenticate them.
+Snapshots contain at most eight observations. Unsupported signed/directed/higher-arity input fails closed; it is not converted to a clique or another graph. Steps are ordered observations, not elapsed seconds. Physical observation windows and construction from raw events remain study-specific. A gap produces `observation_gap_unresolved`. Observation IDs and supplied handoffs are input assumptions; this program does not authenticate them. The generated common-driver fixture mirrors its correlation upper triangle to eliminate floating-point asymmetry; this is an explicit fixture construction step. External asymmetric input is still rejected. Inputs whose totals or transition kernels exceed finite solver arithmetic return an input error.
 
 Output binds input SHA-256, model profile and Markov time to a run SHA-256. These are **canonical JSON hashes, not IPLD CIDs**. The planned Kotoba adapter would use verified IPLD/DAG-CBOR/CID blocks as authority and RDF/Datom indexes as explicit projections. That integration is not implemented here.
 

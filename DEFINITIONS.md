@@ -144,6 +144,8 @@ single enclosing contour.
     OPENBLAS_NUM_THREADS=1 python engine.py
     python build.py
 
+Numeric inputs must also fit the solver arithmetic: overflowing total weight or nonfinite transition kernels/objective values are rejected with ValueError. No rounded or fabricated partition is substituted.
+
 No network is used by the engine, tests, rendering, or exported viewer.
 This prototype is standalone research work. It neither edits nor publishes
 junkawasaki.com and does not finish JUN-653's article/PR task.
@@ -173,3 +175,7 @@ that RDF parsing/SHACL was untested. No equivalence axiom maps the experimental
 0.2 vocabulary to the article's illustrative 0.1 vocabulary or to Inc/BFO.
 A signed block adapter, calibrated uncertainty, real-data comparison, SBM,
 finite-time coherent sets and Markov blankets remain future work.
+
+## 10. Merge review corrections (2026-10-31)
+
+The recovered engine and synthetic study keep their original mathematical objective and generator. The snapshot fixture adapter now explicitly mirrors the upper triangle for the generated common-driver correlation matrix, because corrcoef can introduce last-bit asymmetry. Caller-supplied matrices still require exact symmetry. All six advertised CLI fixtures are tested end-to-end through extraction. Numeric range guards reject overflowing totals and nonfinite solver results; CLI regressions check exit code 2 and no result file instead of a traceback. These guards do not establish numerical conditioning or accuracy for arbitrary input scales.

@@ -2,6 +2,7 @@
 from functools import lru_cache
 import hashlib
 import json
+import math
 import time
 import numpy as np
 from scipy.linalg import expm
@@ -33,13 +34,20 @@ def masks(n):
 
 
 def validate(a):
-    a = np.asarray(a, dtype=float)
+    try:
+        a = np.asarray(a, dtype=float)
+    except (OverflowError, TypeError) as error:
+        raise ValueError('weights must fit finite floating-point arithmetic') from error
     if a.ndim != 2 or a.shape[0] != a.shape[1] or not 1 <= len(a) <= 8:
         raise ValueError('square 1..8 adjacency required')
     if not np.isfinite(a).all() or (a < 0).any():
         raise ValueError('finite nonnegative weights required')
     if not np.allclose(a, a.T) or not np.allclose(np.diag(a), 0):
         raise ValueError('this prototype accepts undirected graphs without self loops')
+    try:
+        math.fsum(a.flat)
+    except OverflowError as error:
+        raise ValueError('total weight exceeds finite floating-point range; rescale input') from error
     return a
 
 
@@ -50,7 +58,13 @@ def kernel(a, tau):
     d = a.sum(axis=1)
     if (d == 0).any():
         raise ValueError('kernel undefined for isolated observations: abstain instead')
-    p = expm(tau * (a / d[:, None] - np.eye(len(a))))
+    try:
+        with np.errstate(over='raise', invalid='raise', divide='raise'):
+            p = expm(tau * (a / d[:, None] - np.eye(len(a))))
+    except (FloatingPointError, OverflowError) as error:
+        raise ValueError('Markov time exceeds the numerical range of this solver') from error
+    if not np.isfinite(p).all():
+        raise ValueError('Markov time produced a nonfinite transition kernel')
     pi = d / d.sum()
     return np.diag(pi) @ p - np.outer(pi, pi), p, pi
 
@@ -79,6 +93,8 @@ def optimize(a, tau=1.0, method='stability'):
     else:
         raise ValueError('unknown method')
     scores = np.einsum('ij,j->i', masks(len(active)), b.ravel(), optimize=False)
+    if not np.isfinite(scores).all():
+        raise ValueError('objective exceeds finite floating-point range')
     best = float(scores.max())
     tied = np.flatnonzero(np.abs(scores-best) <= 1e-10)
     chosen = partitions(len(active))[tied[0]].astype(int)

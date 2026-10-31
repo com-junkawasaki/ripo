@@ -126,7 +126,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.009399499977007508,
+              "seconds": 0.013636582996696234,
               "isolated": []
             },
             "0.3": {
@@ -145,7 +145,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000894750002771616,
+              "seconds": 0.0007243329891934991,
               "isolated": []
             },
             "1.0": {
@@ -164,7 +164,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005469589959830046,
+              "seconds": 0.0005021250108256936,
               "isolated": []
             },
             "3.0": {
@@ -183,7 +183,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0009567920351400971,
+              "seconds": 0.000484999967738986,
               "isolated": []
             },
             "10.0": {
@@ -202,7 +202,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001577500021085143,
+              "seconds": 0.004384875064715743,
               "isolated": []
             }
           },
@@ -222,7 +222,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0013709579361602664,
+            "seconds": 0.0023934999480843544,
             "isolated": []
           }
         },
@@ -338,7 +338,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000645708991214633,
+              "seconds": 0.000864375033415854,
               "isolated": []
             },
             "0.3": {
@@ -357,7 +357,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005356250330805779,
+              "seconds": 0.0006933340337127447,
               "isolated": []
             },
             "1.0": {
@@ -376,7 +376,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005124160088598728,
+              "seconds": 0.0008185839978978038,
               "isolated": []
             },
             "3.0": {
@@ -395,7 +395,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005110410274937749,
+              "seconds": 0.0010141669772565365,
               "isolated": []
             },
             "10.0": {
@@ -414,7 +414,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004995419876649976,
+              "seconds": 0.0007104999385774136,
               "isolated": []
             }
           },
@@ -434,7 +434,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00041366706136614084,
+            "seconds": 0.0005195409758016467,
             "isolated": []
           }
         },
@@ -550,7 +550,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004915000172331929,
+              "seconds": 0.0005972079234197736,
               "isolated": []
             },
             "0.3": {
@@ -569,7 +569,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005021670367568731,
+              "seconds": 0.000547999981790781,
               "isolated": []
             },
             "1.0": {
@@ -588,7 +588,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004864580696448684,
+              "seconds": 0.0005210839444771409,
               "isolated": []
             },
             "3.0": {
@@ -607,7 +607,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004898749757558107,
+              "seconds": 0.0005307079991325736,
               "isolated": []
             },
             "10.0": {
@@ -626,7 +626,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004933340242132545,
+              "seconds": 0.001525416038930416,
               "isolated": []
             }
           },
@@ -646,7 +646,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00040320900734514,
+            "seconds": 0.000492249964736402,
             "isolated": []
           }
         },
@@ -762,7 +762,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00048637506552040577,
+              "seconds": 0.0005655420245602727,
               "isolated": []
             },
             "0.3": {
@@ -781,7 +781,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00048150005750358105,
+              "seconds": 0.0005300419870764017,
               "isolated": []
             },
             "1.0": {
@@ -800,7 +800,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005072919884696603,
+              "seconds": 0.000604541040956974,
               "isolated": []
             },
             "3.0": {
@@ -819,7 +819,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004910840652883053,
+              "seconds": 0.0007353749824687839,
               "isolated": []
             },
             "10.0": {
@@ -838,7 +838,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004842500202357769,
+              "seconds": 0.0011625000042840838,
               "isolated": []
             }
           },
@@ -858,7 +858,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004000830231234431,
+            "seconds": 0.0008861249079927802,
             "isolated": []
           }
         },
@@ -974,7 +974,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004883749643340707,
+              "seconds": 0.0006922089960426092,
               "isolated": []
             },
             "0.3": {
@@ -993,7 +993,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004917500773444772,
+              "seconds": 0.0005492080235853791,
               "isolated": []
             },
             "1.0": {
@@ -1012,7 +1012,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0008654159028083086,
+              "seconds": 0.0005257910815998912,
               "isolated": []
             },
             "3.0": {
@@ -1031,7 +1031,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001641749986447394,
+              "seconds": 0.0015001249266788363,
               "isolated": []
             },
             "10.0": {
@@ -1050,7 +1050,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0031341250287368894,
+              "seconds": 0.0013027919922024012,
               "isolated": []
             }
           },
@@ -1070,7 +1070,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0006003750022500753,
+            "seconds": 0.0005023330450057983,
             "isolated": []
           }
         },
@@ -1186,7 +1186,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0015307910507544875,
+              "seconds": 0.0009003329323604703,
               "isolated": []
             },
             "0.3": {
@@ -1205,7 +1205,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0012588329846039414,
+              "seconds": 0.0005449170712381601,
               "isolated": []
             },
             "1.0": {
@@ -1224,7 +1224,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0026845420943573117,
+              "seconds": 0.0004755000118166208,
               "isolated": []
             },
             "3.0": {
@@ -1243,7 +1243,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006061670137569308,
+              "seconds": 0.00046108406968414783,
               "isolated": []
             },
             "10.0": {
@@ -1262,7 +1262,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005521670682355762,
+              "seconds": 0.0005107080796733499,
               "isolated": []
             }
           },
@@ -1282,7 +1282,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0019007079536095262,
+            "seconds": 0.000505249947309494,
             "isolated": []
           }
         }
@@ -2622,7 +2622,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0016115419566631317,
+              "seconds": 0.0005604589823633432,
               "isolated": []
             },
             "0.3": {
@@ -2641,7 +2641,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0024737089406698942,
+              "seconds": 0.0005126249743625522,
               "isolated": []
             },
             "1.0": {
@@ -2660,7 +2660,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0009613750735297799,
+              "seconds": 0.0004682079888880253,
               "isolated": []
             },
             "3.0": {
@@ -2679,7 +2679,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006224580574780703,
+              "seconds": 0.00045870791655033827,
               "isolated": []
             },
             "10.0": {
@@ -2698,7 +2698,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005639169830828905,
+              "seconds": 0.00045508297625929117,
               "isolated": []
             }
           },
@@ -2718,7 +2718,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0024109999649226665,
+            "seconds": 0.0003636250039562583,
             "isolated": []
           }
         },
@@ -2834,7 +2834,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006135830190032721,
+              "seconds": 0.00045008398592472076,
               "isolated": []
             },
             "0.3": {
@@ -2853,7 +2853,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005109589546918869,
+              "seconds": 0.000522458110935986,
               "isolated": []
             },
             "1.0": {
@@ -2872,7 +2872,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004904590314254165,
+              "seconds": 0.0006983339553698897,
               "isolated": []
             },
             "3.0": {
@@ -2891,7 +2891,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004979169461876154,
+              "seconds": 0.0005820830119773746,
               "isolated": []
             },
             "10.0": {
@@ -2910,7 +2910,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004871670389547944,
+              "seconds": 0.0004623749991878867,
               "isolated": []
             }
           },
@@ -2930,7 +2930,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00040395790711045265,
+            "seconds": 0.0003682500682771206,
             "isolated": []
           }
         },
@@ -3046,7 +3046,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004847920499742031,
+              "seconds": 0.0004772499669343233,
               "isolated": []
             },
             "0.3": {
@@ -3065,7 +3065,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004808339290320873,
+              "seconds": 0.0005932500353083014,
               "isolated": []
             },
             "1.0": {
@@ -3084,7 +3084,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00047737499698996544,
+              "seconds": 0.0005197919672355056,
               "isolated": []
             },
             "3.0": {
@@ -3103,7 +3103,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0014357499312609434,
+              "seconds": 0.00046220794320106506,
               "isolated": []
             },
             "10.0": {
@@ -3122,7 +3122,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0011583749437704682,
+              "seconds": 0.0005140840075910091,
               "isolated": []
             }
           },
@@ -3142,7 +3142,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.000753166968934238,
+            "seconds": 0.0007798329461365938,
             "isolated": []
           }
         },
@@ -3275,7 +3275,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000540749984793365,
+              "seconds": 0.0006633750163018703,
               "isolated": []
             },
             "0.3": {
@@ -3294,7 +3294,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004925000248476863,
+              "seconds": 0.0009675829205662012,
               "isolated": []
             },
             "1.0": {
@@ -3313,7 +3313,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.002235334017314017,
+              "seconds": 0.0005162080051377416,
               "isolated": []
             },
             "3.0": {
@@ -3332,7 +3332,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000606624991632998,
+              "seconds": 0.0007182079134508967,
               "isolated": []
             },
             "10.0": {
@@ -3351,7 +3351,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000522000016644597,
+              "seconds": 0.0009824999142438173,
               "isolated": []
             }
           },
@@ -3371,7 +3371,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004116250202059746,
+            "seconds": 0.0005770829739049077,
             "isolated": []
           }
         },
@@ -3487,7 +3487,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005092080682516098,
+              "seconds": 0.0005613750545307994,
               "isolated": []
             },
             "0.3": {
@@ -3506,7 +3506,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004969170549884439,
+              "seconds": 0.0005235000280663371,
               "isolated": []
             },
             "1.0": {
@@ -3525,7 +3525,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004892919678241014,
+              "seconds": 0.0006621670909225941,
               "isolated": []
             },
             "3.0": {
@@ -3544,7 +3544,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007991669699549675,
+              "seconds": 0.000681874924339354,
               "isolated": []
             },
             "10.0": {
@@ -3563,7 +3563,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005055830115452409,
+              "seconds": 0.0006653750315308571,
               "isolated": []
             }
           },
@@ -3583,7 +3583,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00040799996349960566,
+            "seconds": 0.0005427090218290687,
             "isolated": []
           }
         },
@@ -3699,7 +3699,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0017104579601436853,
+              "seconds": 0.0005641670431941748,
               "isolated": []
             },
             "0.3": {
@@ -3718,7 +3718,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006148330867290497,
+              "seconds": 0.0005573749076575041,
               "isolated": []
             },
             "1.0": {
@@ -3737,7 +3737,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005333750741556287,
+              "seconds": 0.0005215000128373504,
               "isolated": []
             },
             "3.0": {
@@ -3756,7 +3756,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0036831250181421638,
+              "seconds": 0.0005137500120326877,
               "isolated": []
             },
             "10.0": {
@@ -3775,7 +3775,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001327417092397809,
+              "seconds": 0.00048575003165751696,
               "isolated": []
             }
           },
@@ -3795,7 +3795,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00045833305921405554,
+            "seconds": 0.0004612080520018935,
             "isolated": []
           }
         }
@@ -5195,7 +5195,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00203233293723315,
+              "seconds": 0.0007683750009164214,
               "isolated": []
             },
             "0.3": {
@@ -5214,7 +5214,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001009874977171421,
+              "seconds": 0.0007729579228907824,
               "isolated": []
             },
             "1.0": {
@@ -5233,7 +5233,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005849580047652125,
+              "seconds": 0.003357167006470263,
               "isolated": []
             },
             "3.0": {
@@ -5252,7 +5252,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005238750018179417,
+              "seconds": 0.0007799169979989529,
               "isolated": []
             },
             "10.0": {
@@ -5271,7 +5271,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000458915950730443,
+              "seconds": 0.0005769999697804451,
               "isolated": []
             }
           },
@@ -5291,7 +5291,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0003943339688703418,
+            "seconds": 0.0005057079251855612,
             "isolated": []
           }
         },
@@ -5407,7 +5407,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005623749457299709,
+              "seconds": 0.0010773750254884362,
               "isolated": []
             },
             "0.3": {
@@ -5426,7 +5426,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007206669542938471,
+              "seconds": 0.0008739590412005782,
               "isolated": []
             },
             "1.0": {
@@ -5445,7 +5445,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005966669414192438,
+              "seconds": 0.0006027080817148089,
               "isolated": []
             },
             "3.0": {
@@ -5464,7 +5464,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.002313791075721383,
+              "seconds": 0.0005373330786824226,
               "isolated": []
             },
             "10.0": {
@@ -5483,7 +5483,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001714124926365912,
+              "seconds": 0.0005622080061584711,
               "isolated": []
             }
           },
@@ -5503,7 +5503,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00116620899643749,
+            "seconds": 0.0011087920283898711,
             "isolated": []
           }
         },
@@ -5619,7 +5619,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.002247833996079862,
+              "seconds": 0.0005922089330852032,
               "isolated": []
             },
             "0.3": {
@@ -5638,7 +5638,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007527910638600588,
+              "seconds": 0.0008538329275324941,
               "isolated": []
             },
             "1.0": {
@@ -5657,7 +5657,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007968330755829811,
+              "seconds": 0.0006446660263463855,
               "isolated": []
             },
             "3.0": {
@@ -5676,7 +5676,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005336670437827706,
+              "seconds": 0.0004914159653708339,
               "isolated": []
             },
             "10.0": {
@@ -5695,7 +5695,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007539159851148725,
+              "seconds": 0.00046604196541011333,
               "isolated": []
             }
           },
@@ -5715,7 +5715,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0008272499544546008,
+            "seconds": 0.0005518329562619328,
             "isolated": []
           }
         },
@@ -5831,7 +5831,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0009636660106480122,
+              "seconds": 0.0013970419531688094,
               "isolated": []
             },
             "0.3": {
@@ -5850,7 +5850,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0008875411003828049,
+              "seconds": 0.0009440829744562507,
               "isolated": []
             },
             "1.0": {
@@ -5869,7 +5869,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0008205410558730364,
+              "seconds": 0.0006871250225231051,
               "isolated": []
             },
             "3.0": {
@@ -5888,7 +5888,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005461249966174364,
+              "seconds": 0.0005647500511258841,
               "isolated": []
             },
             "10.0": {
@@ -5907,7 +5907,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005087500903755426,
+              "seconds": 0.0004817500011995435,
               "isolated": []
             }
           },
@@ -5927,7 +5927,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00041220802813768387,
+            "seconds": 0.0007229589391499758,
             "isolated": []
           }
         },
@@ -6043,7 +6043,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004927500849589705,
+              "seconds": 0.000904542044736445,
               "isolated": []
             },
             "0.3": {
@@ -6062,7 +6062,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0008142499718815088,
+              "seconds": 0.0004802079638466239,
               "isolated": []
             },
             "1.0": {
@@ -6081,7 +6081,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.002742834039963782,
+              "seconds": 0.0018732090247794986,
               "isolated": []
             },
             "3.0": {
@@ -6100,7 +6100,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006813749205321074,
+              "seconds": 0.0017079160315915942,
               "isolated": []
             },
             "10.0": {
@@ -6119,7 +6119,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005358330672606826,
+              "seconds": 0.0006132080452516675,
               "isolated": []
             }
           },
@@ -6139,7 +6139,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0005640839226543903,
+            "seconds": 0.0005648749647662044,
             "isolated": []
           }
         },
@@ -6255,7 +6255,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005713329883292317,
+              "seconds": 0.0005948329344391823,
               "isolated": []
             },
             "0.3": {
@@ -6274,7 +6274,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005154999671503901,
+              "seconds": 0.0005339169874787331,
               "isolated": []
             },
             "1.0": {
@@ -6293,7 +6293,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004982920363545418,
+              "seconds": 0.0005137920379638672,
               "isolated": []
             },
             "3.0": {
@@ -6312,7 +6312,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001462915912270546,
+              "seconds": 0.0005357080372050405,
               "isolated": []
             },
             "10.0": {
@@ -6331,7 +6331,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006217920454218984,
+              "seconds": 0.0005105830496177077,
               "isolated": []
             }
           },
@@ -6351,7 +6351,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004285000031813979,
+            "seconds": 0.0004142089746892452,
             "isolated": []
           }
         }
@@ -7599,7 +7599,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005426669958978891,
+              "seconds": 0.0005353330634534359,
               "isolated": []
             },
             "0.3": {
@@ -7618,7 +7618,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005055839428678155,
+              "seconds": 0.0005094170337542892,
               "isolated": []
             },
             "1.0": {
@@ -7637,7 +7637,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004968750290572643,
+              "seconds": 0.0008088749600574374,
               "isolated": []
             },
             "3.0": {
@@ -7656,7 +7656,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005007080035284162,
+              "seconds": 0.0007431670092046261,
               "isolated": []
             },
             "10.0": {
@@ -7675,7 +7675,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005095000378787518,
+              "seconds": 0.0007168339798226953,
               "isolated": []
             }
           },
@@ -7695,7 +7695,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00041458301711827517,
+            "seconds": 0.0003922500181943178,
             "isolated": []
           }
         },
@@ -7811,7 +7811,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00048729206901043653,
+              "seconds": 0.0008292089914903045,
               "isolated": []
             },
             "0.3": {
@@ -7830,7 +7830,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005599579308182001,
+              "seconds": 0.0005162499146535993,
               "isolated": []
             },
             "1.0": {
@@ -7849,7 +7849,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004808329977095127,
+              "seconds": 0.0004598330706357956,
               "isolated": []
             },
             "3.0": {
@@ -7868,7 +7868,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004841670161113143,
+              "seconds": 0.000583791988901794,
               "isolated": []
             },
             "10.0": {
@@ -7887,7 +7887,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004817500011995435,
+              "seconds": 0.0012445420725271106,
               "isolated": []
             }
           },
@@ -7907,7 +7907,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004002919886261225,
+            "seconds": 0.0003941659815609455,
             "isolated": []
           }
         },
@@ -8023,7 +8023,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00048575003165751696,
+              "seconds": 0.0004822090268135071,
               "isolated": []
             },
             "0.3": {
@@ -8042,7 +8042,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004797079600393772,
+              "seconds": 0.00045308296103030443,
               "isolated": []
             },
             "1.0": {
@@ -8061,7 +8061,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0011613750830292702,
+              "seconds": 0.0004468749975785613,
               "isolated": []
             },
             "3.0": {
@@ -8080,7 +8080,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007647499442100525,
+              "seconds": 0.000454624998383224,
               "isolated": []
             },
             "10.0": {
@@ -8099,7 +8099,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0023512080078944564,
+              "seconds": 0.00044604192953556776,
               "isolated": []
             }
           },
@@ -8119,7 +8119,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0007948749698698521,
+            "seconds": 0.0003631250001490116,
             "isolated": []
           }
         },
@@ -8235,7 +8235,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.003149125026538968,
+              "seconds": 0.00044937501661479473,
               "isolated": []
             },
             "0.3": {
@@ -8254,7 +8254,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006224170792847872,
+              "seconds": 0.00043937505688518286,
               "isolated": []
             },
             "1.0": {
@@ -8273,7 +8273,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005100000416859984,
+              "seconds": 0.0004372920375317335,
               "isolated": []
             },
             "3.0": {
@@ -8292,7 +8292,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005007920553907752,
+              "seconds": 0.0004408330423757434,
               "isolated": []
             },
             "10.0": {
@@ -8311,7 +8311,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000497707980684936,
+              "seconds": 0.00044291699305176735,
               "isolated": []
             }
           },
@@ -8331,7 +8331,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004040829371660948,
+            "seconds": 0.0003619999624788761,
             "isolated": []
           }
         },
@@ -8447,7 +8447,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004874159349128604,
+              "seconds": 0.0004380419850349426,
               "isolated": []
             },
             "0.3": {
@@ -8466,7 +8466,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00048399996012449265,
+              "seconds": 0.0004368330119177699,
               "isolated": []
             },
             "1.0": {
@@ -8485,7 +8485,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004824999487027526,
+              "seconds": 0.00043654197361320257,
               "isolated": []
             },
             "3.0": {
@@ -8504,7 +8504,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00048462499398738146,
+              "seconds": 0.0004379999591037631,
               "isolated": []
             },
             "10.0": {
@@ -8523,7 +8523,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000488333054818213,
+              "seconds": 0.00043995899613946676,
               "isolated": []
             }
           },
@@ -8543,7 +8543,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00040033389814198017,
+            "seconds": 0.000397459021769464,
             "isolated": []
           }
         },
@@ -8659,7 +8659,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004872080171480775,
+              "seconds": 0.0004369579255580902,
               "isolated": []
             },
             "0.3": {
@@ -8678,7 +8678,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000479541951790452,
+              "seconds": 0.0004345841007307172,
               "isolated": []
             },
             "1.0": {
@@ -8697,7 +8697,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004765409976243973,
+              "seconds": 0.0012272080639377236,
               "isolated": []
             },
             "3.0": {
@@ -8716,7 +8716,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00047920807264745235,
+              "seconds": 0.000677666044794023,
               "isolated": []
             },
             "10.0": {
@@ -8735,7 +8735,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00048229098320007324,
+              "seconds": 0.0005672499537467957,
               "isolated": []
             }
           },
@@ -8755,7 +8755,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00039974995888769627,
+            "seconds": 0.0005530830239877105,
             "isolated": []
           }
         }
@@ -10242,7 +10242,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005146660842001438,
+              "seconds": 0.0005321250064298511,
               "isolated": []
             },
             "0.3": {
@@ -10261,7 +10261,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004932919982820749,
+              "seconds": 0.0005051669431850314,
               "isolated": []
             },
             "1.0": {
@@ -10280,7 +10280,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004818330053240061,
+              "seconds": 0.0005072910571470857,
               "isolated": []
             },
             "3.0": {
@@ -10299,7 +10299,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001723624998703599,
+              "seconds": 0.00045804097317159176,
               "isolated": []
             },
             "10.0": {
@@ -10318,7 +10318,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0008597919950261712,
+              "seconds": 0.00045187491923570633,
               "isolated": []
             }
           },
@@ -10338,7 +10338,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0009626660030335188,
+            "seconds": 0.0007172499317675829,
             "isolated": []
           },
           "mechanism_result": {
@@ -10357,7 +10357,7 @@
             "ties": null,
             "status": "no_relational_evidence",
             "evaluated": 0,
-            "seconds": 0.0007638750830665231,
+            "seconds": 0.00021779094822704792,
             "isolated": [
               0,
               1,
@@ -10565,7 +10565,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001320375013165176,
+              "seconds": 0.0005887079751119018,
               "isolated": []
             },
             "0.3": {
@@ -10584,7 +10584,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007700000423938036,
+              "seconds": 0.0006443749880418181,
               "isolated": []
             },
             "1.0": {
@@ -10603,7 +10603,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0015038750134408474,
+              "seconds": 0.0005429589655250311,
               "isolated": []
             },
             "3.0": {
@@ -10622,7 +10622,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0026838749181479216,
+              "seconds": 0.0006313339108601213,
               "isolated": []
             },
             "10.0": {
@@ -10641,7 +10641,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0015923749888315797,
+              "seconds": 0.000544707989320159,
               "isolated": []
             }
           },
@@ -10661,7 +10661,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004387079970911145,
+            "seconds": 0.0005439999513328075,
             "isolated": []
           },
           "mechanism_result": {
@@ -10680,7 +10680,7 @@
             "ties": null,
             "status": "no_relational_evidence",
             "evaluated": 0,
-            "seconds": 7.387495134025812e-05,
+            "seconds": 7.508404087275267e-05,
             "isolated": [
               0,
               1,
@@ -10888,7 +10888,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005797910271212459,
+              "seconds": 0.0004911669529974461,
               "isolated": []
             },
             "0.3": {
@@ -10907,7 +10907,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001616499968804419,
+              "seconds": 0.0005112920189276338,
               "isolated": []
             },
             "1.0": {
@@ -10926,7 +10926,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006697920616716146,
+              "seconds": 0.0005042089615017176,
               "isolated": []
             },
             "3.0": {
@@ -10945,7 +10945,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005359580973163247,
+              "seconds": 0.0005039999959990382,
               "isolated": []
             },
             "10.0": {
@@ -10964,7 +10964,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005152079975232482,
+              "seconds": 0.0005046249134466052,
               "isolated": []
             }
           },
@@ -10984,7 +10984,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0037326670717447996,
+            "seconds": 0.0004089169669896364,
             "isolated": []
           },
           "mechanism_result": {
@@ -11003,7 +11003,7 @@
             "ties": null,
             "status": "no_relational_evidence",
             "evaluated": 0,
-            "seconds": 0.00012766709551215172,
+            "seconds": 7.020903285592794e-05,
             "isolated": [
               0,
               1,
@@ -11211,7 +11211,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0020503749838098884,
+              "seconds": 0.0004967920249328017,
               "isolated": []
             },
             "0.3": {
@@ -11230,7 +11230,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006575000006705523,
+              "seconds": 0.0005028749583289027,
               "isolated": []
             },
             "1.0": {
@@ -11249,7 +11249,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.002213291940279305,
+              "seconds": 0.0004989580484107137,
               "isolated": []
             },
             "3.0": {
@@ -11268,7 +11268,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0006482499884441495,
+              "seconds": 0.0004972079768776894,
               "isolated": []
             },
             "10.0": {
@@ -11287,7 +11287,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005213330732658505,
+              "seconds": 0.0004978328943252563,
               "isolated": []
             }
           },
@@ -11307,7 +11307,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004088749410584569,
+            "seconds": 0.00040620798245072365,
             "isolated": []
           },
           "mechanism_result": {
@@ -11326,7 +11326,7 @@
             "ties": null,
             "status": "no_relational_evidence",
             "evaluated": 0,
-            "seconds": 6.141699850559235e-05,
+            "seconds": 6.750004831701517e-05,
             "isolated": [
               0,
               1,
@@ -11534,7 +11534,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00043287500739097595,
+              "seconds": 0.0004920000210404396,
               "isolated": []
             },
             "0.3": {
@@ -11553,7 +11553,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004322079475969076,
+              "seconds": 0.0007153749465942383,
               "isolated": []
             },
             "1.0": {
@@ -11572,7 +11572,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00042937498074024916,
+              "seconds": 0.0005806669360026717,
               "isolated": []
             },
             "3.0": {
@@ -11591,7 +11591,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004687500186264515,
+              "seconds": 0.000851999968290329,
               "isolated": []
             },
             "10.0": {
@@ -11610,7 +11610,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004290830111131072,
+              "seconds": 0.0013512920122593641,
               "isolated": []
             }
           },
@@ -11630,7 +11630,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0003549159737303853,
+            "seconds": 0.0009395420784130692,
             "isolated": []
           },
           "mechanism_result": {
@@ -11649,7 +11649,7 @@
             "ties": null,
             "status": "no_relational_evidence",
             "evaluated": 0,
-            "seconds": 5.6875054724514484e-05,
+            "seconds": 0.00010637508239597082,
             "isolated": [
               0,
               1,
@@ -11857,7 +11857,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00043208396527916193,
+              "seconds": 0.0015510419616475701,
               "isolated": []
             },
             "0.3": {
@@ -11876,7 +11876,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004285830073058605,
+              "seconds": 0.0005055000074207783,
               "isolated": []
             },
             "1.0": {
@@ -11895,7 +11895,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004322079475969076,
+              "seconds": 0.00045016699004918337,
               "isolated": []
             },
             "3.0": {
@@ -11914,7 +11914,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00043108395766466856,
+              "seconds": 0.0004562500398606062,
               "isolated": []
             },
             "10.0": {
@@ -11933,7 +11933,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00044395902659744024,
+              "seconds": 0.0004553749458864331,
               "isolated": []
             }
           },
@@ -11953,7 +11953,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004955410258844495,
+            "seconds": 0.00036687508691102266,
             "isolated": []
           },
           "mechanism_result": {
@@ -11972,7 +11972,7 @@
             "ties": null,
             "status": "no_relational_evidence",
             "evaluated": 0,
-            "seconds": 0.00010891701094806194,
+            "seconds": 6.366695743054152e-05,
             "isolated": [
               0,
               1,
@@ -14041,7 +14041,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007592081092298031,
+              "seconds": 0.0007716660620644689,
               "isolated": []
             },
             "0.3": {
@@ -14060,7 +14060,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007402501069009304,
+              "seconds": 0.0006583749782294035,
               "isolated": []
             },
             "1.0": {
@@ -14079,7 +14079,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0009734999621286988,
+              "seconds": 0.0010181249817833304,
               "isolated": []
             },
             "3.0": {
@@ -14098,7 +14098,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005882079713046551,
+              "seconds": 0.0013525839895009995,
               "isolated": []
             },
             "10.0": {
@@ -14117,7 +14117,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.011508540948852897,
+              "seconds": 0.000510666985064745,
               "isolated": []
             }
           },
@@ -14137,7 +14137,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.001988625037483871,
+            "seconds": 0.0003862909507006407,
             "isolated": []
           }
         },
@@ -14253,7 +14253,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0015401249984279275,
+              "seconds": 0.0004648749018087983,
               "isolated": []
             },
             "0.3": {
@@ -14272,7 +14272,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005389170255511999,
+              "seconds": 0.0005370000144466758,
               "isolated": []
             },
             "1.0": {
@@ -14291,7 +14291,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005526250461116433,
+              "seconds": 0.0005325829843059182,
               "isolated": []
             },
             "3.0": {
@@ -14310,7 +14310,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0004952079616487026,
+              "seconds": 0.001723624998703599,
               "isolated": []
             },
             "10.0": {
@@ -14329,7 +14329,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00618837506044656,
+              "seconds": 0.0005097920075058937,
               "isolated": []
             }
           },
@@ -14349,7 +14349,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00045908300671726465,
+            "seconds": 0.0007337919669225812,
             "isolated": []
           }
         },
@@ -14465,7 +14465,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005214159609749913,
+              "seconds": 0.0005253329873085022,
               "isolated": []
             },
             "0.3": {
@@ -14484,7 +14484,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005014169728383422,
+              "seconds": 0.0005330839194357395,
               "isolated": []
             },
             "1.0": {
@@ -14503,7 +14503,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0007635840447619557,
+              "seconds": 0.00047337496653199196,
               "isolated": []
             },
             "3.0": {
@@ -14522,7 +14522,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.004300250089727342,
+              "seconds": 0.0007130420999601483,
               "isolated": []
             },
             "10.0": {
@@ -14541,7 +14541,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0011167910415679216,
+              "seconds": 0.0006754160858690739,
               "isolated": []
             }
           },
@@ -14561,7 +14561,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0017868330469354987,
+            "seconds": 0.00045616598799824715,
             "isolated": []
           }
         },
@@ -14677,7 +14677,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0011623329482972622,
+              "seconds": 0.0005909170722588897,
               "isolated": []
             },
             "0.3": {
@@ -14696,7 +14696,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.000730041996575892,
+              "seconds": 0.00047570792958140373,
               "isolated": []
             },
             "1.0": {
@@ -14715,7 +14715,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0011714999563992023,
+              "seconds": 0.0004589579766616225,
               "isolated": []
             },
             "3.0": {
@@ -14734,7 +14734,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.004984874976798892,
+              "seconds": 0.0005152920493856072,
               "isolated": []
             },
             "10.0": {
@@ -14753,7 +14753,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005926248850300908,
+              "seconds": 0.0008811670122668147,
               "isolated": []
             }
           },
@@ -14773,7 +14773,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.00037383404560387135,
+            "seconds": 0.00038474996108561754,
             "isolated": []
           }
         },
@@ -14889,7 +14889,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.00045066699385643005,
+              "seconds": 0.0004660410340875387,
               "isolated": []
             },
             "0.3": {
@@ -14908,7 +14908,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0015082909958437085,
+              "seconds": 0.00045533396769315004,
               "isolated": []
             },
             "1.0": {
@@ -14927,7 +14927,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.002266500028781593,
+              "seconds": 0.000447375001385808,
               "isolated": []
             },
             "3.0": {
@@ -14946,7 +14946,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0005840420490130782,
+              "seconds": 0.0004482079530134797,
               "isolated": []
             },
             "10.0": {
@@ -14965,7 +14965,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0008313340367749333,
+              "seconds": 0.0004487499827519059,
               "isolated": []
             }
           },
@@ -14985,7 +14985,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0009380410192534328,
+            "seconds": 0.0003617919282987714,
             "isolated": []
           }
         },
@@ -15101,7 +15101,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0013946659164503217,
+              "seconds": 0.0004419999895617366,
               "isolated": []
             },
             "0.3": {
@@ -15120,7 +15120,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.001874250010587275,
+              "seconds": 0.000680458964779973,
               "isolated": []
             },
             "1.0": {
@@ -15139,7 +15139,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0017659160075709224,
+              "seconds": 0.0006415419047698379,
               "isolated": []
             },
             "3.0": {
@@ -15158,7 +15158,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0018304579425603151,
+              "seconds": 0.0005338750779628754,
               "isolated": []
             },
             "10.0": {
@@ -15177,7 +15177,7 @@
               "ties": 1,
               "status": "candidate",
               "evaluated": 4140,
-              "seconds": 0.0016411669785156846,
+              "seconds": 0.000516165979206562,
               "isolated": []
             }
           },
@@ -15197,7 +15197,7 @@
             "ties": 1,
             "status": "candidate",
             "evaluated": 4140,
-            "seconds": 0.0004801250761374831,
+            "seconds": 0.00041341606993228197,
             "isolated": []
           }
         }
@@ -18671,7 +18671,7 @@
       }
     ]
   },
-  "seconds": 0.2800112919649109,
+  "seconds": 0.18259216693695635,
   "scope": "synthetic undirected nonnegative binary relations, at most 8 observations",
   "method": "fixed-time continuous-time Markov Stability, exact enumeration",
   "limitations": [
