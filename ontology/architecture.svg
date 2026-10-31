@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+<title id="title">From relational ontology to computable records</title>
+<desc id="desc">RIPO motivates a typed theory. An Inc bridge, RDF descriptions and numerical models have distinct tasks. Observations and provenance connect model predictions to evidence, with corrections returning to the theory.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#334155"/></marker></defs>
+<rect width="960" height="620" rx="18" fill="#f8fafc"/>
+<g font-family="system-ui,sans-serif" text-anchor="middle" fill="#0f172a">
+<text x="480" y="37" font-size="24" font-weight="700">A research architecture for computable RIPO</text>
+<g stroke="#cbd5e1" stroke-width="2">
+<rect x="180" y="65" width="600" height="70" rx="10" fill="#dbeafe"/>
+<rect x="180" y="175" width="600" height="70" rx="10" fill="#e0e7ff"/>
+<rect x="25" y="290" width="285" height="100" rx="10" fill="#f1f5f9"/>
+<rect x="337" y="290" width="286" height="100" rx="10" fill="#f1f5f9"/>
+<rect x="650" y="290" width="285" height="100" rx="10" fill="#f1f5f9"/>
+<rect x="180" y="440" width="600" height="80" rx="10" fill="#dcfce7"/>
+</g>
+<g font-size="18" font-weight="600">
+<text x="480" y="93">RIPO: relation, information, becoming, inheritance</text>
+<text x="480" y="203">Typed theory and explicit bridge assumptions</text>
+<text x="167" y="321">Inc bridge</text><text x="480" y="321">RDF / OWL / SHACL</text>
+<text x="792" y="321">Numerical models</text><text x="480" y="470">Observations, claims, evidence and provenance</text>
+</g>
+<g font-size="15">
+<text x="480" y="119">Philosophical commitments and questions</text>
+<text x="480" y="229">Identity, time, persistence and admissible transitions</text>
+<text x="167" y="348">Boundaries, bisimulation, resonance</text><text x="167" y="374">Conditional mathematical results</text>
+<text x="480" y="348">Descriptions, entailment, validation</text><text x="480" y="374">No automatic truth certification</text>
+<text x="792" y="348">Dynamics, likelihoods, interventions</text><text x="792" y="374">Predictions with uncertainty</text>
+<text x="480" y="497">Versioned inputs and results; corrections retain earlier records</text>
+<text x="480" y="580">Connecting arrows require specified mappings and tests.</text>
+<text x="480" y="603">They do not assert a completed reduction or a deployed runtime.</text>
+</g></g>
+<g fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)">
+<path d="M480 135V173"/><path d="M480 245V267H167V288"/><path d="M480 245V288"/><path d="M480 267H792V288"/>
+<path d="M167 390V417H350V438"/><path d="M480 390V438"/><path d="M792 390V417H610V438"/>
+<path d="M180 480H10V210H178"/>
+</g>
+</svg>

@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "ripo": "https://example.org/ripo-experimental/0.2#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "subClassOf": {"@id": "rdfs:subClassOf", "@type": "@id"},
+    "range": {"@id": "rdfs:range", "@type": "@id"}
+  },
+  "@graph": [
+    {
+      "@id": "https://example.org/ripo-experimental/0.2",
+      "@type": "owl:Ontology",
+      "owl:versionInfo": "0.2.0 experimental operational vocabulary",
+      "rdfs:comment": "An information/provenance vocabulary for hypotheses; not a proof of reality, not Inc Boundary, and no BFO/CCO equivalence is asserted. RDF/OWL reasoning has not been validated."
+    },
+    {
+      "@id": "ripo:ExtractionRun", "@type": "owl:Class", "subClassOf": "prov:Activity",
+      "rdfs:comment": "A parameterized computation on a versioned input snapshot."
+    },
+    {
+      "@id": "ripo:IndividuationHypothesis", "@type": "owl:Class", "subClassOf": "prov:Entity",
+      "rdfs:comment": "An information entity representing a model-relative candidate block of observations. It is not the represented real-world process."
+    },
+    {
+      "@id": "ripo:MembershipAssessment", "@type": "owl:Class", "subClassOf": "prov:Entity",
+      "rdfs:comment": "A recorded degree of model-relative membership, not existence probability."
+    },
+    {
+      "@id": "ripo:BoundaryRepresentation", "@type": "owl:Class", "subClassOf": "prov:Entity",
+      "rdfs:comment": "A display contour derived from a hypothesis and layout/rendering parameters. It does not assert a physical interface."
+    },
+    {
+      "@id": "ripo:LineageAssertion", "@type": "owl:Class", "subClassOf": "prov:Entity",
+      "rdfs:comment": "An evidence-supported correspondence assertion between hypotheses at adjacent steps; it never implies numerical identity."
+    },
+    {"@id": "ripo:member", "@type": "owl:ObjectProperty"},
+    {"@id": "ripo:aboutHypothesis", "@type": "owl:ObjectProperty", "range": "ripo:IndividuationHypothesis"},
+    {"@id": "ripo:sourceHypothesis", "@type": "owl:ObjectProperty", "range": "ripo:IndividuationHypothesis"},
+    {"@id": "ripo:targetHypothesis", "@type": "owl:ObjectProperty", "range": "ripo:IndividuationHypothesis"},
+    {"@id": "ripo:membershipValue", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:observationStep", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:markovTime", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:inputSHA256", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:algorithmVersion", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:synthetic", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:sigma", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:level", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:displayLayout", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:correspondenceKind", "@type": "owl:DatatypeProperty"},
+    {"@id": "ripo:evidenceJSON", "@type": "owl:DatatypeProperty"}
+  ]
+}
+

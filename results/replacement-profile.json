@@ -1,0 +1,463 @@
+{
+  "schema": "ripo.snapshot-extraction.v0.3",
+  "run_sha256": "2d5c86909a0d21e3f0208e43e059a95a60702eb8978fdc1b0cdfad582d302e8c",
+  "input_sha256": "1a207ae3eae05a8a567fdc914b1e9956e65406f7bb916ffac016606b2b41ada0",
+  "profile": "ripo.snapshot-extraction.v0.3",
+  "tau": 1.0,
+  "time_semantics": "ordered observation steps; physical windows not supplied",
+  "relation_kind": "exchange",
+  "frames": [
+    {
+      "step": 0,
+      "ids": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "groups": [
+        [
+          "a0",
+          "a1",
+          "a2",
+          "a3"
+        ],
+        [
+          "b0",
+          "b1",
+          "b2",
+          "b3"
+        ]
+      ],
+      "assessment": {
+        "labels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "score": 0.46876049641688355,
+        "gap": 0.03793381633419962,
+        "ties": 1,
+        "status": "candidate",
+        "evaluated": 4140,
+        "isolated": []
+      }
+    },
+    {
+      "step": 1,
+      "ids": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "groups": [
+        [
+          "a0",
+          "a1",
+          "a2",
+          "a3"
+        ],
+        [
+          "b0",
+          "b1",
+          "b2",
+          "b3"
+        ]
+      ],
+      "assessment": {
+        "labels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "score": 0.46876049641688355,
+        "gap": 0.03793381633419962,
+        "ties": 1,
+        "status": "candidate",
+        "evaluated": 4140,
+        "isolated": []
+      }
+    },
+    {
+      "step": 2,
+      "ids": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "groups": [
+        [
+          "a0",
+          "a1",
+          "a2",
+          "a3"
+        ],
+        [
+          "b0",
+          "b1",
+          "b2",
+          "b3"
+        ]
+      ],
+      "assessment": {
+        "labels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "score": 0.46876049641688355,
+        "gap": 0.03793381633419962,
+        "ties": 1,
+        "status": "candidate",
+        "evaluated": 4140,
+        "isolated": []
+      }
+    },
+    {
+      "step": 3,
+      "ids": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "groups": [
+        [
+          "r0",
+          "r1",
+          "r2",
+          "r3"
+        ],
+        [
+          "b0",
+          "b1",
+          "b2",
+          "b3"
+        ]
+      ],
+      "assessment": {
+        "labels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "score": 0.46876049641688355,
+        "gap": 0.03793381633419962,
+        "ties": 1,
+        "status": "candidate",
+        "evaluated": 4140,
+        "isolated": []
+      }
+    },
+    {
+      "step": 4,
+      "ids": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "groups": [
+        [
+          "r0",
+          "r1",
+          "r2",
+          "r3"
+        ],
+        [
+          "b0",
+          "b1",
+          "b2",
+          "b3"
+        ]
+      ],
+      "assessment": {
+        "labels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "score": 0.46876049641688355,
+        "gap": 0.03793381633419962,
+        "ties": 1,
+        "status": "candidate",
+        "evaluated": 4140,
+        "isolated": []
+      }
+    },
+    {
+      "step": 5,
+      "ids": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "groups": [
+        [
+          "r0",
+          "r1",
+          "r2",
+          "r3"
+        ],
+        [
+          "b0",
+          "b1",
+          "b2",
+          "b3"
+        ]
+      ],
+      "assessment": {
+        "labels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "score": 0.46876049641688355,
+        "gap": 0.03793381633419962,
+        "ties": 1,
+        "status": "candidate",
+        "evaluated": 4140,
+        "isolated": []
+      }
+    }
+  ],
+  "correspondences": [
+    {
+      "before_step": 0,
+      "after_step": 1,
+      "links": [
+        {
+          "source": 0,
+          "target": 0,
+          "overlap": [
+            "a0",
+            "a1",
+            "a2",
+            "a3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        },
+        {
+          "source": 1,
+          "target": 1,
+          "overlap": [
+            "b0",
+            "b1",
+            "b2",
+            "b3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        }
+      ],
+      "unlinked_after": [],
+      "status": "evidence_correspondence_only"
+    },
+    {
+      "before_step": 1,
+      "after_step": 2,
+      "links": [
+        {
+          "source": 0,
+          "target": 0,
+          "overlap": [
+            "a0",
+            "a1",
+            "a2",
+            "a3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        },
+        {
+          "source": 1,
+          "target": 1,
+          "overlap": [
+            "b0",
+            "b1",
+            "b2",
+            "b3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        }
+      ],
+      "unlinked_after": [],
+      "status": "evidence_correspondence_only"
+    },
+    {
+      "before_step": 2,
+      "after_step": 3,
+      "links": [
+        {
+          "source": 0,
+          "target": 0,
+          "overlap": [],
+          "handoffs": [
+            [
+              "a0",
+              "r0"
+            ],
+            [
+              "a1",
+              "r1"
+            ],
+            [
+              "a2",
+              "r2"
+            ],
+            [
+              "a3",
+              "r3"
+            ]
+          ],
+          "kind": "handoff"
+        },
+        {
+          "source": 1,
+          "target": 1,
+          "overlap": [
+            "b0",
+            "b1",
+            "b2",
+            "b3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        }
+      ],
+      "unlinked_after": [],
+      "status": "evidence_correspondence_only"
+    },
+    {
+      "before_step": 3,
+      "after_step": 4,
+      "links": [
+        {
+          "source": 0,
+          "target": 0,
+          "overlap": [
+            "r0",
+            "r1",
+            "r2",
+            "r3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        },
+        {
+          "source": 1,
+          "target": 1,
+          "overlap": [
+            "b0",
+            "b1",
+            "b2",
+            "b3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        }
+      ],
+      "unlinked_after": [],
+      "status": "evidence_correspondence_only"
+    },
+    {
+      "before_step": 4,
+      "after_step": 5,
+      "links": [
+        {
+          "source": 0,
+          "target": 0,
+          "overlap": [
+            "r0",
+            "r1",
+            "r2",
+            "r3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        },
+        {
+          "source": 1,
+          "target": 1,
+          "overlap": [
+            "b0",
+            "b1",
+            "b2",
+            "b3"
+          ],
+          "handoffs": [],
+          "kind": "member_continuity"
+        }
+      ],
+      "unlinked_after": [],
+      "status": "evidence_correspondence_only"
+    }
+  ],
+  "interpretation": "candidate partitions and supplied correspondence evidence, not numerical identity",
+  "persistence": "canonical JSON + SHA-256 in this reference profile; not IPLD/CID",
+  "qualification": {
+    "input_origin": "caller_supplied_not_independently_verified",
+    "empirical_validation": false,
+    "causal_autonomy_inferred": false,
+    "kotoba_runtime_integrated": false
+  }
+}

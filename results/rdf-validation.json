@@ -1,0 +1,1 @@
+{"hypothesis_triples": 3380, "hypothesis_records": 710, "shacl_conforms": true, "negative_controls": 3, "lineage_sameAs": false, "transition_query_delta": "1.0", "limits": "bounded RDF/SHACL; not OWL consistency, empirical truth or BFO/Inc conformance"}

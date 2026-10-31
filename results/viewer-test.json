@@ -1,0 +1,1 @@
+{"ui_states_checked":720,"widths":[320,736],"checks":"scenario/scale/time/layout; finite geometry; 8 observations; layout-invariant result","limitation":"DOM shim only; no browser layout or pixel inspection"}

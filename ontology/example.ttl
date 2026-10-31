@@ -1,0 +1,43 @@
+@prefix ripo: <https://example.org/ripo/0.1#> .
+@prefix ex: <https://example.org/ripo/example/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Synthetic data: a description of a process, and records about it.
+ex:waterFlow a ripo:WorldProcess .
+ex:before a ripo:StateDescription ;
+    ripo:aboutEntity ex:waterFlow ; ripo:numericValue 20.0 ;
+    ripo:unit ex:degreeCelsius ;
+    ripo:validAt "2026-10-31T00:00:00Z"^^xsd:dateTime .
+ex:after a ripo:StateDescription ;
+    ripo:aboutEntity ex:waterFlow ; ripo:numericValue 21.0 ;
+    ripo:unit ex:degreeCelsius ;
+    ripo:validAt "2026-10-31T00:01:00Z"^^xsd:dateTime .
+ex:change a ripo:TransitionRecord ;
+    ripo:beforeState ex:before ; ripo:afterState ex:after ;
+    ripo:recordedAt "2026-10-31T00:02:00Z"^^xsd:dateTime .
+
+# Reification describes a proposition; it does not assert its base triple.
+ex:claim a ripo:Claim ;
+    rdf:subject ex:after ; rdf:predicate ripo:numericValue ; rdf:object 21.0 ;
+    ripo:supportedBy ex:evidence .
+ex:evidence a ripo:Evidence ; prov:wasGeneratedBy ex:observation .
+ex:observation a ripo:ObservationProcess ; prov:used ex:sensorRecord .
+ex:sensorRecord a prov:Entity .
+ex:assessment a ripo:Assessment ; ripo:assesses ex:claim ;
+    ripo:assessmentStatus "supported" ;
+    prov:wasAttributedTo ex:reviewer ;
+    prov:wasDerivedFrom ex:evidence ;
+    ripo:recordedAt "2026-10-31T00:03:00Z"^^xsd:dateTime .
+ex:reviewer a prov:Agent .
+
+# Generic n-ary relation description, not an Inc boundary serialization.
+ex:coupling a ripo:RelationDescription ;
+    ripo:hasParticipation ex:p1, ex:p2 .
+ex:p1 a ripo:EndpointParticipation ; ripo:hasEndpoint ex:waterFlow ;
+    ripo:hasRole ex:measured ; ripo:sign 0 ; ripo:multiplicity 1 .
+ex:p2 a ripo:EndpointParticipation ; ripo:hasEndpoint ex:sensorRecord ;
+    ripo:hasRole ex:instrument ; ripo:sign 0 ; ripo:multiplicity 1 .
+ex:measured a ripo:RoleLabel .
+ex:instrument a ripo:RoleLabel .
