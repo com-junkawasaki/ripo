@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import unittest
 
-from market import (UNITS, allocate, budgets, communities, contrast, fits,
+from market import (POLICIES, UNITS, allocate, budgets, communities, contrast, fits,
                     literature, observed_snapshot, reason, validate)
 
 ROOT = Path(__file__).resolve().parent
@@ -16,6 +16,27 @@ def fixture():
 
 
 class MarketTests(unittest.TestCase):
+    def test_positive_demand_never_fits_zero_capacity(self):
+        d = fixture(); d['jobs'] = d['jobs'][:1]
+        d['jobs'][0]['demand']['memory'] = 1e-9
+        for n in d['nodes']:
+            n['capacity']['memory'] = 0
+        for policy in POLICIES:
+            self.assertEqual(allocate(d, policy)['assigned_jobs'], 0)
+
+    def test_decimal_reservations_do_not_accumulate_binary_roundoff(self):
+        d = fixture(); d['jobs'] = d['jobs'][:3]
+        for n in d['nodes']:
+            n['available'] = n['id'] == 'sim-gpu-a'
+            n['capacity']['cpu'] = .3
+            n['reserve']['cpu'] = 0
+        for j in d['jobs']:
+            j['demand']['cpu'] = .1
+        for policy in ('fresh_fifo', 'optimized'):
+            r = allocate(d, policy)
+            self.assertEqual(r['assigned_jobs'], 3)
+            self.assertEqual(r['usage']['sim-gpu-a']['cpu'], .3)
+
     def test_solver_against_independent_small_enumeration(self):
         d = fixture()
         d['jobs'] = d['jobs'][:3]

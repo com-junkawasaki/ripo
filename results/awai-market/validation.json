@@ -9,7 +9,7 @@
   "checks": {
     "unittest_discover": {
       "passed": true,
-      "tests": 38
+      "tests": 40
     },
     "market_reproduction": {
       "passed": true,
@@ -38,12 +38,12 @@
     }
   },
   "files_sha256": {
-    "market.py": "7a189ed0db6d8d2886d0e50589a4682d6e859b6c7906536855f5589b5ea160f1",
-    "test_market.py": "4edd70311927cc768990418bcccf0d199e5ce207424ba0f71fd0479deba3ecd1",
+    "market.py": "6ba406421f37bf50349a64f8df2f0497b14c9e749828e52bceac5d450a9b0f00",
+    "test_market.py": "445a0851da03dfbb2f5c3eaba167949bae847a60b3ea0f61b9d554e899334a02",
     "examples/awai-market.json": "a2c8a9173248fa3a01b66611e121c81ec2a4a63de50e87d7c1ca2703d7381717",
     "data/market-evidence.json": "819eaffb9ee4fe8e04102fa3751f87cd6d4a6f145309ce7498c19711182fc300",
     "data/awai-snapshot-20261031.json": "3965f0a301646caf5102dc5a73bd50f5233864b3956d619a5ef13f81dcbd25f9",
-    "results/awai-market/result.json": "1c9b71ab741d1773bd73d9b65928013525d854b6702f6e1c4a1ead8fb96514a2",
+    "results/awai-market/result.json": "eec25e65e5dec195017b47bb84068151a5fe5ad44432814d84b93683420410b1",
     "results/awai-market/comparison.png": "0306268630ccaa8423d2b90014104f1065a6e0f9adddf926347d299e4b2468d7"
   },
   "not_verified": [
@@ -52,5 +52,6 @@
     "GPU/energy/network performance",
     "native runtime or scheduler deployment",
     "merge or publication"
-  ]
+  ],
+  "review_fix": "zero-capacity positive-demand refusal; decimal reservation sums; two added regressions"
 }

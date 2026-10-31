@@ -27,7 +27,7 @@ python scripts/validate_rdf.py
 node test_viewer.cjs
 ```
 
-The 16 recovered numeric tests and ten snapshot-interface tests exercise the model, probability conservation, permutation/weight-scale invariance, copy versus handoff, split/merge, missing observations and refusal of unsupported inputs. Twelve additional market-study controls cover allocation, reserves, eligibility and evidence boundaries (38 total). The DOM shim checks 720 scenario/time/scale/layout/width states and is not pixel/layout QA. All runtime computation, exports and the viewer operate without network access after dependency installation. Python is a scientific reference, not a Kotoba native qualification gate. No JVM/nbb path or CI workflow is included.
+The 16 recovered numeric tests and ten snapshot-interface tests exercise the model, probability conservation, permutation/weight-scale invariance, copy versus handoff, split/merge, missing observations and refusal of unsupported inputs. Fourteen additional market-study controls cover allocation, reserves, eligibility, decimal capacity boundaries and evidence boundaries (40 total). The DOM shim checks 720 scenario/time/scale/layout/width states and is not pixel/layout QA. All runtime computation, exports and the viewer operate without network access after dependency installation. Python is a scientific reference, not a Kotoba native qualification gate. No JVM/nbb path or CI workflow is included.
 
 ## Supply snapshots
 

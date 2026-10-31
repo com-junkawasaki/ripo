@@ -8,6 +8,7 @@ import copy
 import hashlib
 import json
 import math
+from decimal import Decimal
 from pathlib import Path
 
 import numpy as np
@@ -79,7 +80,8 @@ def validate(data):
 
 
 def budgets(data):
-    return {n['id']: {k: n['capacity'][k] * (1 - n['reserve'][k]) for k in UNITS}
+    return {n['id']: {k: float(Decimal(str(n['capacity'][k])) *
+                                   (1 - Decimal(str(n['reserve'][k])))) for k in UNITS}
             for n in data['nodes']}
 
 
@@ -99,13 +101,13 @@ def reason(data, job, node):
         return 'deadline_outside_profile'
     if job['value_points'] <= job['offers'][node['id']]['cost_points']:
         return 'nonpositive_net_value'
-    if any(job['demand'][k] > budgets(data)[node['id']][k] + 1e-8 for k in UNITS):
+    if any(Decimal(str(job['demand'][k])) > Decimal(str(budgets(data)[node['id']][k])) for k in UNITS):
         return 'insufficient_single_job_capacity'
     return None
 
 
 def fits(job, remaining):
-    return all(job['demand'][k] <= remaining[k] + 1e-8 for k in UNITS)
+    return all(Decimal(str(job['demand'][k])) <= Decimal(str(remaining[k])) for k in UNITS)
 
 
 def communities(data):
@@ -149,7 +151,7 @@ def allocate(data, policy, groups=None):
                     continue
                 selected.append((j['id'], nid))
                 for k in UNITS:
-                    remaining[nid][k] -= j['demand'][k]
+                    remaining[nid][k] = float(Decimal(str(remaining[nid][k])) - Decimal(str(j['demand'][k])))
                 break
     else:
         edges = [(j, n) for j in data['jobs'] for n in data['nodes']
@@ -172,6 +174,7 @@ def allocate(data, policy, groups=None):
             selected = [(j['id'], n['id']) for (j, n), take in zip(edges, result.x) if take > .5]
     jobs = {j['id']: j for j in data['jobs']}
     usage = {n: {k: 0 for k in UNITS} for n in nodes}
+    exact_usage = {n: {k: Decimal(0) for k in UNITS} for n in nodes}
     value = 0
     for jid, nid in selected:
         j = jobs[jid]
@@ -179,8 +182,9 @@ def allocate(data, policy, groups=None):
         if reason(data, j, nodes[nid]):
             raise RuntimeError('selected ineligible edge')
         for k in UNITS:
-            usage[nid][k] += j['demand'][k]
-            if usage[nid][k] > cap[nid][k] + 1e-7:
+            exact_usage[nid][k] += Decimal(str(j['demand'][k]))
+            usage[nid][k] = float(exact_usage[nid][k])
+            if exact_usage[nid][k] > Decimal(str(cap[nid][k])):
                 raise RuntimeError('selected capacity violation')
     if len({j for j, _ in selected}) != len(selected):
         raise RuntimeError('duplicate job allocation')

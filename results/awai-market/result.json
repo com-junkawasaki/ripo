@@ -213,18 +213,18 @@
       ],
       "usage": {
         "sim-gpu-a": {
-          "cpu": 6,
-          "memory": 8,
-          "gpu": 0,
-          "storage": 8,
-          "network": 10
+          "cpu": 6.0,
+          "memory": 8.0,
+          "gpu": 0.0,
+          "storage": 8.0,
+          "network": 10.0
         },
         "sim-cpu-a": {
-          "cpu": 2,
-          "memory": 4,
-          "gpu": 0,
-          "storage": 4,
-          "network": 5
+          "cpu": 2.0,
+          "memory": 4.0,
+          "gpu": 0.0,
+          "storage": 4.0,
+          "network": 5.0
         },
         "sim-gpu-b": {
           "cpu": 0,
@@ -338,18 +338,18 @@
       ],
       "usage": {
         "sim-gpu-a": {
-          "cpu": 6,
-          "memory": 8,
-          "gpu": 0,
-          "storage": 8,
-          "network": 10
+          "cpu": 6.0,
+          "memory": 8.0,
+          "gpu": 0.0,
+          "storage": 8.0,
+          "network": 10.0
         },
         "sim-cpu-a": {
-          "cpu": 2,
-          "memory": 4,
-          "gpu": 0,
-          "storage": 4,
-          "network": 5
+          "cpu": 2.0,
+          "memory": 4.0,
+          "gpu": 0.0,
+          "storage": 4.0,
+          "network": 5.0
         },
         "sim-gpu-b": {
           "cpu": 0,
@@ -474,32 +474,32 @@
       ],
       "usage": {
         "sim-gpu-a": {
-          "cpu": 6,
-          "memory": 8,
-          "gpu": 0,
-          "storage": 8,
-          "network": 10
+          "cpu": 6.0,
+          "memory": 8.0,
+          "gpu": 0.0,
+          "storage": 8.0,
+          "network": 10.0
         },
         "sim-cpu-a": {
-          "cpu": 3,
-          "memory": 6,
-          "gpu": 0,
-          "storage": 54,
-          "network": 25
+          "cpu": 3.0,
+          "memory": 6.0,
+          "gpu": 0.0,
+          "storage": 54.0,
+          "network": 25.0
         },
         "sim-gpu-b": {
-          "cpu": 6,
-          "memory": 8,
-          "gpu": 0,
-          "storage": 8,
-          "network": 10
+          "cpu": 6.0,
+          "memory": 8.0,
+          "gpu": 0.0,
+          "storage": 8.0,
+          "network": 10.0
         },
         "sim-cpu-b": {
-          "cpu": 1,
-          "memory": 2,
-          "gpu": 0,
-          "storage": 50,
-          "network": 20
+          "cpu": 1.0,
+          "memory": 2.0,
+          "gpu": 0.0,
+          "storage": 50.0,
+          "network": 20.0
         },
         "sim-stale": {
           "cpu": 0,
@@ -744,32 +744,32 @@
       ],
       "usage": {
         "sim-gpu-a": {
-          "cpu": 5,
-          "memory": 14,
-          "gpu": 1,
-          "storage": 12,
-          "network": 15
+          "cpu": 5.0,
+          "memory": 14.0,
+          "gpu": 1.0,
+          "storage": 12.0,
+          "network": 15.0
         },
         "sim-cpu-a": {
-          "cpu": 6,
-          "memory": 10,
-          "gpu": 0,
-          "storage": 58,
-          "network": 30
+          "cpu": 6.0,
+          "memory": 10.0,
+          "gpu": 0.0,
+          "storage": 58.0,
+          "network": 30.0
         },
         "sim-gpu-b": {
-          "cpu": 5,
-          "memory": 14,
-          "gpu": 1,
-          "storage": 12,
-          "network": 15
+          "cpu": 5.0,
+          "memory": 14.0,
+          "gpu": 1.0,
+          "storage": 12.0,
+          "network": 15.0
         },
         "sim-cpu-b": {
-          "cpu": 4,
-          "memory": 6,
-          "gpu": 0,
-          "storage": 54,
-          "network": 25
+          "cpu": 4.0,
+          "memory": 6.0,
+          "gpu": 0.0,
+          "storage": 54.0,
+          "network": 25.0
         },
         "sim-stale": {
           "cpu": 0,
@@ -841,32 +841,32 @@
       ],
       "usage": {
         "sim-gpu-a": {
-          "cpu": 5,
-          "memory": 14,
-          "gpu": 1,
-          "storage": 12,
-          "network": 15
+          "cpu": 5.0,
+          "memory": 14.0,
+          "gpu": 1.0,
+          "storage": 12.0,
+          "network": 15.0
         },
         "sim-cpu-a": {
-          "cpu": 6,
-          "memory": 10,
-          "gpu": 0,
-          "storage": 58,
-          "network": 30
+          "cpu": 6.0,
+          "memory": 10.0,
+          "gpu": 0.0,
+          "storage": 58.0,
+          "network": 30.0
         },
         "sim-gpu-b": {
-          "cpu": 3,
-          "memory": 12,
-          "gpu": 1,
-          "storage": 58,
-          "network": 30
+          "cpu": 3.0,
+          "memory": 12.0,
+          "gpu": 1.0,
+          "storage": 58.0,
+          "network": 30.0
         },
         "sim-cpu-b": {
-          "cpu": 6,
-          "memory": 8,
-          "gpu": 0,
-          "storage": 8,
-          "network": 10
+          "cpu": 6.0,
+          "memory": 8.0,
+          "gpu": 0.0,
+          "storage": 8.0,
+          "network": 10.0
         },
         "sim-stale": {
           "cpu": 0,
@@ -2324,11 +2324,11 @@
           "network": 0
         },
         "sim-gpu-b": {
-          "cpu": 2,
-          "memory": 10,
-          "gpu": 1,
-          "storage": 8,
-          "network": 10
+          "cpu": 2.0,
+          "memory": 10.0,
+          "gpu": 1.0,
+          "storage": 8.0,
+          "network": 10.0
         },
         "sim-cpu-b": {
           "cpu": 0,
