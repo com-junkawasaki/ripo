@@ -1,0 +1,36 @@
+{
+  "date_jst": "2026-10-31",
+  "python": "3.12.11",
+  "checks": {
+    "all_unittests": 49,
+    "dedicated_pilot_controls": 7,
+    "incomplete_analysis_controls": 2,
+    "full_existing_reproduction": "passed; numeric equality after removing timing; timing-only artifacts restored",
+    "output_payloads_independently_checked": 4,
+    "public_sensor_samples_checked": 32,
+    "plot_visual_inspection": true,
+    "git_diff_check": "passed"
+  },
+  "qualification": {
+    "PR2_merged": "42e7c4c8843ca6d8ff65ea2bd1b057294624bdcc",
+    "native_backend_requests_exercised": true,
+    "planned_comparison_complete": false,
+    "qualified_improvement_pct": null,
+    "customer_outcome_accepted": false,
+    "fleet_scheduler_deployed": false,
+    "Yataverse_readback_qualified": false,
+    "hard_host_reservations_qualified": false,
+    "gpu_power_foreground_qualified": false
+  },
+  "sha256": {
+    "live_pilot.py": "bf0fd634415d8c6e47cf8ce8cb0f636106b2faf3d9e2483e1db0baa63d739d63",
+    "analyze_live_pilot.py": "59a55be59adb6cd26c4a3dd2700b8a3ca16e66edaf000297dfbf295d3ff6a2dd",
+    "test_live_pilot.py": "ba0cf241ce25e795c61ec00aba4a63ff5f3c1aba4edf37d4179b915a74ceb54f",
+    "test_live_analysis.py": "f6298e578e19713a968613697ae10edd8e511c0fdc1ec697ae05453831cd4b0e",
+    "research/awai-127-default-protocol.json": "1092999dac7478ff93207643c41fea92a3b0a56ff1d0e517b3c7748b24a38844",
+    "results/awai-live/summary.json": "4aca282c66de05b60591fe44e120d1834d07afba01fd10f00fb00a82ea6c4a05",
+    "results/awai-live/trials.json": "8e9ab3ccaa675a08d7e1ee053aa6bf8c066a43fe15f09b2f9037a453d39b5211",
+    "results/awai-live/samples.json": "122c2ef3165f70271e9788866d39f2c2a941f0529147ad660ec334a32ec84417",
+    "results/awai-live/latency.png": "03fb6563fb232513b81768d4881870f85eae1a9c972bd3ee2578f14870bde165"
+  }
+}
